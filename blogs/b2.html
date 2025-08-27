@@ -43,7 +43,7 @@
   
   <!-- Background Video -->
   <video id="bgVideo" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover">
-    <source src="./assets/hero5.mp4" type="video/mp4">
+    <source src="./../assets/hero5.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -61,11 +61,11 @@
 
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white">
-        <li><a href="./index.html" class="hover:text-gold transition">Home</a></li>
-        <li><a href="./about.html" class="hover:text-gold transition">About</a></li>
-        <li><a href="./product.html" class="hover:text-gold transition">Product</a></li>
-        <li><a href="./blogs.html" class="hover:text-gold transition">Blogs</a></li>
-        <li><a href="./contact.html" class="hover:text-gold transition">Contact</a></li>
+        <li><a href="./../index.html" class="hover:text-gold transition">Home</a></li>
+        <li><a href="./../about.html" class="hover:text-gold transition">About</a></li>
+        <li><a href="./../product.html" class="hover:text-gold transition">Product</a></li>
+        <li><a href="./../blogs.html" class="hover:text-gold transition">Blogs</a></li>
+        <li><a href="./../contact.html" class="hover:text-gold transition">Contact</a></li>
       </ul>
 
       <!-- Mobile Menu Button -->
@@ -78,23 +78,24 @@
 
     <!-- Mobile Dropdown Menu -->
     <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden">
-      <a href="./index.html" class="uppercase block hover:text-gold transition">Home</a>
-      <a href="./about.html" class="uppercase block hover:text-gold transition">About</a>
-      <a href="./product.html" class="uppercase block hover:text-gold transition">Product</a>
-      <a href="./blogs.html" class="uppercase block hover:text-gold transition">Blogs</a>
-      <a href="./contact.html" class="uppercase block hover:text-gold transition">Contact</a>
+      <a href="./../index.html" class="uppercase block hover:text-gold transition">Home</a>
+      <a href="./../about.html" class="uppercase block hover:text-gold transition">About</a>
+      <a href="./../product.html" class="uppercase block hover:text-gold transition">Product</a>
+      <a href="./../blogs.html" class="uppercase block hover:text-gold transition">Blogs</a>
+      <a href="./../contact.html" class="uppercase block hover:text-gold transition">Contact</a>
     </div>
   </nav>
 
   <!-- HERO CONTENT (RIGHT-BOTTOM) -->
 <div class="relative z-10 flex justify-end items-end h-full px-6 md:px-[8rem] pb-12 md:pb-24">
   <h2 class="text-gold text-right text-4xl md:text-6xl leading-tight font-light max-w-[700px]">
-    OUR <br> BLOG
+   Post-Surgery   <br> Care Guide
   </h2>
 </div>
 
 
 </header>
+
 
 <!-- SCRIPT FOR DROPDOWN -->
 <script>
@@ -119,52 +120,117 @@
     });
   </script>
 
-  <section class="bg-grayLight px-8 md:px-sectionX py-16 border-t-2 border-b-2 border-navy">
+
+
+
+<section class="bg-grayLight px-8 md:px-sectionX py-16 border-b-2 border-navy">
   <div class="max-w-7xl mx-auto">
 
-    <!-- Heading -->
+    <!-- Hero / Blog Title -->
     <div class="text-center mb-12">
-      <h2 class="text-navy text-4xl md:text-6xl font-light mb-4">LATEST FROM OUR BLOG</h2>
-      <div class="w-24 h-[2px] bg-gold mx-auto"></div>
-      <p class="text-dark mt-4 max-w-2xl mx-auto">Insights, tips, and updates from the world of orthopedics to keep you informed and healthy.</p>
+      <h1 class="text-navy text-3xl md:text-5xl font-bold mb-4 leading-tight">
+        Post-Surgery Care Guide
+      </h1>
+      <div class="w-20 h-[3px] bg-gold mx-auto mb-4 rounded"></div>
+      <p class="text-dark text-base md:text-lg">
+        Published on <span class="font-semibold">Aug 27, 2025</span> | By <span class="font-semibold">SAH Ortho</span>
+      </p>
     </div>
 
-    <!-- Blog Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <!-- Blog Content -->
+    <article class="prose prose-lg max-w-full mx-auto text-navy">
+      <!-- Smaller main image -->
+      <img src="./../assets/instrument set.avif" alt="Post Surgery Care" class="w-full h-44 md:h-64 object-cover mb-8 rounded-lg shadow-md">
 
-      <!-- Blog Card -->
-      <article class="border-t-2 border-b-2 border-navy flex flex-col">
-        <img src="./assets/product1.avif" alt="Healthy Bones" class="w-full h-56 object-cover">
-        <div class="pt-6 pb-6 flex flex-col flex-grow">
-          <h3 class="text-navy text-2xl font-semibold mb-2">Tips for Healthy Bones</h3>
-          <p class="text-dark text-base mb-4 flex-grow">Discover expert advice to maintain bone health and prevent fractures effectively.</p>
-          <a href="./blogs/b1.html" class="text-gold font-semibold hover:underline mt-auto">→ READ MORE</a>
-        </div>
-      </article>
+      <p>
+        Recovering from orthopedic surgery requires careful planning and adherence to medical guidelines. Proper post-surgery
+        care ensures faster recovery, reduces complications, and improves long-term outcomes. This guide will help you navigate
+        the recovery process safely and efficiently.
+      </p>
 
-      <!-- Blog Card -->
-      <article class="border-t-2 border-b-2 border-navy flex flex-col">
-        <img src="./assets/instrument set.avif" alt="Post Surgery Care" class="w-full h-56 object-cover">
-        <div class="pt-6 pb-6 flex flex-col flex-grow">
-          <h3 class="text-navy text-2xl font-semibold mb-2">Post-Surgery Care Guide</h3>
-          <p class="text-dark text-base mb-4 flex-grow">Your ultimate checklist for a smooth recovery after orthopedic surgery.</p>
-          <a href="./blogs/b2.html" class="text-gold font-semibold hover:underline mt-auto">→ READ MORE</a>
-        </div>
-      </article>
+      <h2 class="text-xl md:text-2xl font-bold text-gold mb-4">1. Follow Doctor’s Instructions</h2>
+      <p>
+        Always adhere to prescribed medication schedules, physical therapy routines, and follow-up appointments. Ignoring medical
+        instructions can lead to complications and delay healing.
+      </p>
 
-      <!-- Blog Card -->
-      <article class="border-t-2 border-b-2 border-navy flex flex-col">
-        <img src="./assets/tamina.avif" alt="Joint Pain Remedies" class="w-full h-56 object-cover">
-        <div class="pt-6 pb-6 flex flex-col flex-grow">
-          <h3 class="text-navy text-2xl font-semibold mb-2">Joint Pain Remedies</h3>
-          <p class="text-dark text-base mb-4 flex-grow">Effective natural remedies and exercises to ease joint discomfort.</p>
-          <a href="./blogs/b3.html" class="text-gold font-semibold hover:underline mt-auto">→ READ MORE</a>
-        </div>
-      </article>
+      <h2 class="text-xl md:text-2xl font-bold text-gold mb-4">2. Manage Pain and Swelling</h2>
+      <ul class="list-disc list-inside">
+        <li>Use prescribed pain relief medications responsibly and on time.</li>
+        <li>Apply ice packs to reduce swelling and inflammation, typically 15-20 minutes at a time.</li>
+        <li>Elevate the affected limb whenever possible to minimize fluid retention.</li>
+      </ul>
 
+      <h2 class="text-xl md:text-2xl font-bold text-gold mb-4">3. Diet and Hydration</h2>
+      <p>
+        A balanced diet rich in protein, calcium, vitamin D, and other essential nutrients supports tissue repair and strengthens
+        bones. Drink plenty of water to maintain energy and aid recovery.
+      </p>
+
+      <h2 class="text-xl md:text-2xl font-bold text-gold mb-4">4. Physical Therapy</h2>
+      <p>
+        Engage in recommended exercises and physical therapy sessions to restore mobility, improve strength, and prevent stiffness.
+        Consistency is key to achieving optimal recovery outcomes.
+      </p>
+
+      <h2 class="text-xl md:text-2xl font-bold text-gold mb-4">5. Preventing Infections</h2>
+      <p>
+        Keep surgical sites clean and dry. Follow your healthcare provider’s guidance for dressing changes and hygiene. Watch for
+        signs of infection, such as redness, swelling, or unusual discharge.
+      </p>
+
+      <h2 class="text-xl md:text-2xl font-bold text-gold mb-4">6. Mental and Emotional Well-being</h2>
+      <p>
+        Recovery can be challenging physically and emotionally. Stay positive, maintain social connections, and consult professionals
+        if you experience anxiety or depression during recovery.
+      </p>
+
+      <p class="mt-6 font-medium text-lg">
+        By following these guidelines, patients can achieve a smooth and safe recovery, regain independence, and maintain
+        overall orthopedic health.
+      </p>
+    </article>
+
+    <!-- Related Posts -->
+    <div class="mt-16">
+      <h2 class="text-navy text-2xl md:text-3xl font-bold mb-8">Related Posts</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+        <article class="border-t-2 border-b-2 border-navy flex flex-col">
+          <img src="./../assets/product1.avif" alt="Healthy Bones" class="w-full h-44 md:h-56 object-cover">
+          <div class="pt-6 pb-6 flex flex-col flex-grow">
+            <h3 class="text-navy text-xl md:text-2xl font-bold mb-2">Tips for Healthy Bones</h3>
+            <p class="text-dark text-base mb-4 flex-grow">Discover expert advice to maintain bone health and prevent fractures effectively.</p>
+            <a href="#" class="text-gold font-semibold hover:underline mt-auto">→ READ MORE</a>
+          </div>
+        </article>
+
+        <article class="border-t-2 border-b-2 border-navy flex flex-col">
+          <img src="./../assets/tamina.avif" alt="Joint Pain Remedies" class="w-full h-44 md:h-56 object-cover">
+          <div class="pt-6 pb-6 flex flex-col flex-grow">
+            <h3 class="text-navy text-xl md:text-2xl font-bold mb-2">Joint Pain Remedies</h3>
+            <p class="text-dark text-base mb-4 flex-grow">Effective natural remedies and exercises to ease joint discomfort.</p>
+            <a href="#" class="text-gold font-semibold hover:underline mt-auto">→ READ MORE</a>
+          </div>
+        </article>
+
+        <article class="border-t-2 border-b-2 border-navy flex flex-col">
+          <img src="./../assets/orthoimg1.avif" alt="Bone Health Tips" class="w-full h-44 md:h-56 object-cover">
+          <div class="pt-6 pb-6 flex flex-col flex-grow">
+            <h3 class="text-navy text-xl md:text-2xl font-bold mb-2">Bone Health Tips</h3>
+            <p class="text-dark text-base mb-4 flex-grow">Simple lifestyle changes to maintain strong and healthy bones at any age.</p>
+            <a href="#" class="text-gold font-semibold hover:underline mt-auto">→ READ MORE</a>
+          </div>
+        </article>
+
+      </div>
     </div>
+
   </div>
 </section>
+
+
+
 
 
 <footer class="bg-navy text-gold pt-16 pb-8 px-8 md:px-[8rem]">
@@ -217,15 +283,17 @@
                 class="mr-2">&rarr;</span> External Fixation Systems</a></li>
         </ul>
       </div> <!-- Column 3: Contact Info -->
-       <div>
-        <span class="font-semibold text-base uppercase block mb-3">Contact</span>
-        <p class="text-sm text-center md:text-left">
-          House No. 27, Kh No. 136/2, Peepal Wala Mohalla, Near Bank of Baroda, Badli, North West Delhi, Delhi,
-          110042<br>
-          Phone: +91 98765 43210<br>
-          Email: info@bonebridge.com<br>
-          Mon–Sat: 9:00am – 6:00pm
-        </p>
+      <div> <span class="font-semibold text-base uppercase block mb-3">CONTACT</span>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center justify-center md:justify-start"> 1234 MedTech Park,
+            Gujarat, India</li>
+          <li class="flex items-center justify-center md:justify-start"> +91 98765 43210
+          </li>
+          <li class="flex items-center justify-center md:justify-start"> info@bonebridge.com
+          </li>
+          <li class="flex items-center justify-center md:justify-start"> Mon–Sat: 9:00am –
+            6:00pm</li>
+        </ul>
       </div> <!-- Column 4: Social & Button -->
 
     </div>
