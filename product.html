@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAH Ortho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: "#B8981E",
+            goldLight: "#E6D6A8",
+            navy: "#0D2233",
+            white: "#FFFFFF",
+            grayLight: "#F7F7F7",
+            dark: "#1A1A1A",
+            overlay: "rgba(0,0,0,0.6)",
+          },
+          spacing: {
+            sectionX: "8rem",
+          },
+          fontFamily: {
+            sans: ["Helvetica", "Arial", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @layer base {
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+ <!-- HERO SECTION -->
+<header class="relative w-full h-screen bg-black overflow-hidden">
+  
+  <!-- Background Video -->
+  <video id="bgVideo" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover">
+    <source src="./assets/hero1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <!-- NAVBAR -->
+  <nav class="absolute top-0 left-0 w-full px-6 md:px-[8rem] py-6 z-20 bg-transparent">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex flex-col">
+        <h1 class="text-2xl font-bold text-white">SAH <span class="text-gold">Ortho</span></h1>
+        <p class="text-sm text-gray-300">reducing complexity</p>
+      </div>
+
+        <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white">
+        <li><a href="./index.html" class="hover:text-gold transition">Home</a></li>
+        <li><a href="./about.html" class="hover:text-gold transition">About</a></li>
+        <li><a href="./product.html" class="hover:text-gold transition">Product</a></li>
+        <li><a href="./blogs.html" class="hover:text-gold transition">Blogs</a></li>
+        <li><a href="./contact.html" class="hover:text-gold transition">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-white focus:outline-none">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden">
+      <a href="./index.html" class="uppercase block hover:text-gold transition">Home</a>
+      <a href="./about.html" class="uppercase block hover:text-gold transition">About</a>
+      <a href="./product.html" class="uppercase block hover:text-gold transition">Product</a>
+      <a href="./blogs.html" class="uppercase block hover:text-gold transition">Blogs</a>
+      <a href="./contact.html" class="uppercase block hover:text-gold transition">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO CONTENT (RIGHT-BOTTOM) -->
+  <div class="relative z-10 flex justify-end items-end h-full px-6 md:px-[8rem] pb-12 md:pb-24">
+    <h2 class="text-gold text-right text-4xl md:text-6xl leading-tight font-light max-w-[700px]">
+      
+THE SAH ORTHO <br> PRODUCTS 
+    </h2>
+  </div>
+</header>
+
+<!-- SCRIPT FOR DROPDOWN -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = document.getElementById('menuIcon');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.innerHTML = mobileMenu.classList.contains('hidden') 
+      ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>' 
+      : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+  });
+</script>
+
+
+  <script>
+    const video = document.getElementById('bgVideo');
+    video.addEventListener('ended', () => {
+      video.pause();
+      video.currentTime = video.duration; // Hold on last frame
+    });
+  </script>
+
+
+
+<section class="bg-white px-8 md:px-[8rem] py-16">
+  <div class="max-w-7xl mx-auto">
+    <!-- Title -->
+    <h2 class="text-gold text-5xl md:text-7xl font-light mb-10 leading-tight">
+      OUR STREAMLINED<br>IMPLANT PORTFOLIO
+    </h2>
+    <!-- Description -->
+    <p class="text-gold text-xl md:text-2xl mb-16 max-w-5xl">
+      We offer an implant portfolio to cover the majority of fracture patterns with only two core instrument sets (2.5mm/3.5mm) — everything designed to promote simplicity in the OR.
+    </p>
+    <!-- Portfolio Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+      
+      <!-- Upper Extremity -->
+      <div>
+        <h3 class="text-gold text-2xl font-normal mb-4">UPPER EXTREMITY</h3>
+        <div class="border-t-2 border-navy mb-4"></div>
+        <div class="w-full h-[400px] flex items-center justify-center mb-4">
+          <img src="./assets/product1.avif" alt="Upper Extremity" class="w-full h-full object-contain" />
+        </div>
+        <div class="border-b-2 border-navy"></div>
+      </div>
+
+      <!-- Lower Extremity -->
+      <div>
+        <h3 class="text-gold text-2xl font-normal mb-4">LOWER EXTREMITY</h3>
+        <div class="border-t-2 border-navy mb-4"></div>
+        <div class="w-full h-[400px] flex items-center justify-center mb-4">
+          <img src="./assets/product1.avif" alt="Lower Extremity" class="w-full h-full object-contain" />
+        </div>
+        <div class="border-b-2 border-navy"></div>
+      </div>
+
+      <!-- Product Example -->
+      <div>
+        <div class="flex flex-col">
+          <div>
+            <div class="flex items-end">
+              <h3 class="text-gold text-3xl font-normal mb-4 mr-4 border-b-2 border-navy w-full pb-2">
+                CASCELLA
+              </h3>
+            </div>
+            <div class="w-full h-[400px] flex items-center justify-center mb-4">
+              <img src="./assets/product1.avif" alt="Cascella Implant" class="w-full h-full object-contain" />
+            </div>
+            <div class="border-b-2 border-navy"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="bg-white px-8 md:px-[8rem] py-24">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-12">
+    <!-- Left: Text -->
+    <div class="flex-1">
+      <div class="border-t-2 border-navy mb-12"></div>
+      <h2 class="text-navy text-5xl md:text-6xl font-light mb-8">TECHNOLOGY</h2>
+      <h3 class="text-navy text-2xl font-semibold mb-6">BASIC PRINCIPLE</h3>
+      <p class="text-navy text-md md:text-lg mb-6">
+        The TIC (Titanium Inlay Clip) System allows for variable angle (VA) screw locking within the Bonebridge osteosynthesis plates. The TIC System combines two metals (pure titanium and medical grade stainless steel), both known for their differences in stiffness and strength properties. The softer titanium is used to manufacture the TIC inlay, which is firmly assembled to the plate body. The harder stainless steel screw then forms its thread into the TIC inlay during the insertion of the VA Locking Screw. The screw then locks at a predefined locking torque, resulting in a fixed screw to plate construct.
+      </p>
+      <p class="text-navy text-md md:text-lg">
+        The TIC has shown consistently low removal torques after mechanical lifecycle tests as well as in clinical use. Despite this, results show equal to superior stability compared to competitors. The combination of both metals in orthopaedic implants is proven to be biocompatible.
+      </p>
+    </div>
+    <!-- Right: Image + Dots -->
+    <div class="flex-1 flex flex-col items-center">
+      <img src="./assets/technology1.avif" alt="TIC Technology" class="w-full max-w-md object-contain mb-4" id="tech-img">
+      <div class="flex space-x-2 mt-2">
+        <button class="w-3 h-3 rounded-full bg-navy" id="dot-0"></button>
+        <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-1"></button>
+        <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  // Simple image slider for the technology section
+  const techImages = [
+    "./assets/technology1.avif",
+    "./assets/technology1.avif",
+    "./assets/technology1.avif"
+  ];
+  const techImg = document.getElementById('tech-img');
+  const dots = [0,1,2].map(i => document.getElementById('dot-' + i));
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      techImg.src = techImages[i];
+      dots.forEach((d, idx) => {
+        d.classList.toggle('bg-navy', idx === i);
+        d.classList.toggle('bg-white', idx !== i);
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+<section class="bg-white px-8 md:px-[8rem] py-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+    
+    <!-- Card 1 -->
+    <div>
+      <h3 class="text-navy text-2xl font-semibold mb-4">15° ALL AROUND</h3>
+      <div class="w-full h-[180px] flex items-center justify-center mb-6">
+        <img src="./assets/instrument set.avif" alt="15 Degree All Around" class="h-full object-contain" />
+      </div>
+      <p class="text-lg text-navy leading-relaxed">
+        As the VA Locking Screw forms its own thread into the TIC inlay, the screw may be angulated 
+        in any direction within the cone of operation (+/-15°). If needed, a VA Locking Screw can 
+        be inserted up to 3 times into the same hole.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div>
+      <h3 class="text-navy text-2xl font-semibold mb-4">ONE HOLE, TWO SCREWS</h3>
+      <div class="w-full h-[180px] flex items-center justify-center mb-6">
+        <img src="./assets/instrument set.avif" alt="One Hole Two Screws" class="h-full object-contain" />
+      </div>
+      <p class="text-lg text-navy leading-relaxed">
+        All TIC holes can be used with either VA Locking Screws or Cortical Screws, 
+        depending on the specific surgical needs.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div>
+      <h3 class="text-navy text-2xl font-semibold mb-4">ONE CLICK TO STABILITY</h3>
+      <div class="w-full h-[180px] flex items-center justify-center mb-6">
+        <img src="./assets/instrument set.avif" alt="One Click to Stability" class="h-full object-contain" />
+      </div>
+      <p class="text-lg text-navy leading-relaxed">
+        Thanks to its unique geometry, the TIC allows all drill guides to click into 
+        the desired hole for stable drilling support.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Full width bottom border -->
+  <div class="border-b-2 border-navy mt-16"></div>
+</section>
+
+
+
+<section class="bg-white px-8 md:px-[8rem] py-16 border-b-2 border-navy">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Heading -->
+    <h2 class="text-gold text-4xl md:text-6xl font-light mb-6">THE BONEBRIDGE PRODUCTS</h2>
+    
+    <!-- Top Border -->
+    <div class="border-t-2 border-navy mb-10"></div>
+
+    <!-- Slider Wrapper -->
+    <div class="relative">
+      
+      <!-- Left Arrow -->
+      <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-navy text-white w-10 h-10 flex items-center justify-center z-20">
+        &#10094;
+      </button>
+
+      <!-- Slider Content -->
+      <div id="productSlider" class="flex overflow-x-auto gap-8 scroll-smooth no-scrollbar">
+        
+        <!-- Card Template -->
+        <div class="min-w-[300px] max-w-[300px] flex-shrink-0 flex flex-col h-[400px]">
+          <img src="./assets/cortex screw.avif" alt="Cascella Mix" class="w-full h-[200px] object-cover mb-4">
+          <h3 class="text-navy text-2xl font-semibold">CASCELLA</h3>
+          <p class="text-navy text-lg mb-2">3.5mm Superior Clavicle System</p>
+          <p class="text-navy text-base flex-grow">Designed for fracture care of the clavicle</p>
+          <a href="#" class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
+        </div>
+
+        <div class="min-w-[300px] max-w-[300px] flex-shrink-0 flex flex-col h-[400px]">
+          <img src="./assets/instrument set.avif" alt="Tamina Mix" class="w-full h-[200px] object-cover mb-4">
+          <h3 class="text-navy text-2xl font-semibold">TAMINA</h3>
+          <p class="text-navy text-lg mb-2">3.5mm Proximal Humerus System</p>
+          <p class="text-navy text-base flex-grow">Designed for fracture care of the proximal humerus</p>
+          <a href="#" class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
+        </div>
+
+        <div class="min-w-[300px] max-w-[300px] flex-shrink-0 flex flex-col h-[400px]">
+          <img src="./assets/product1.avif" alt="Lorraine Mix" class="w-full h-[200px] object-cover mb-4">
+          <h3 class="text-navy text-2xl font-semibold">LORRAINE</h3>
+          <p class="text-navy text-lg mb-2">3.5mm Distal Humerus System</p>
+          <p class="text-navy text-base flex-grow">Designed for fracture care of the distal humerus</p>
+          <a href="#" class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
+        </div>
+
+        <div class="min-w-[300px] max-w-[300px] flex-shrink-0 flex flex-col h-[400px]">
+          <img src="./assets/leporello.avif" alt="Leporello Mix" class="w-full h-[200px] object-cover mb-4">
+          <h3 class="text-navy text-2xl font-semibold">LEPORELLO</h3>
+          <p class="text-navy text-lg mb-2">3.5mm Olecranon System</p>
+          <p class="text-navy text-base flex-grow">Designed for fracture care of the olecranon</p>
+          <a href="#" class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
+        </div>
+
+      </div>
+
+      <!-- Right Arrow -->
+      <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-navy text-white w-10 h-10 flex items-center justify-center z-20">
+        &#10095;
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Hide scrollbar -->
+<style>
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+<script>
+  const slider = document.getElementById('productSlider');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+
+  nextBtn.addEventListener('click', () => slider.scrollBy({ left: 960, behavior: 'smooth' }));
+  prevBtn.addEventListener('click', () => slider.scrollBy({ left: -960, behavior: 'smooth' }));
+</script>
+
+
+
+
+
+
+<footer class="bg-navy text-gold pt-16 pb-8 px-8 md:px-[8rem]">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+
+    <!-- Social & Contact -->
+    <div class="flex flex-col items-center md:items-start space-y-8">
+      <div>
+        <span class="uppercase tracking-wide text-sm font-medium mb-3 block">Follow us</span>
+        <div class="flex justify-center md:justify-start space-x-2 mt-2">
+          <a href="#" aria-label="LinkedIn" class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.04 0 3.602 2.001 3.602 4.601v5.595z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117c-1.863-.504-9.391-.504-9.391-.504s-7.527 0-9.391.504a2.994 2.994 0 0 0-2.107 2.117c-.504 1.864-.504 5.754-.504 5.754s0 3.89.504 5.754a2.994 2.994 0 0 0 2.107 2.117c1.864.504 9.391.504 9.391.504s7.528 0 9.391-.504a2.994 2.994 0 0 0 2.107-2.117c.504-1.864.504-5.754.504-5.754s0-3.89-.504-5.754zm-13.498 9.814v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <a href="#" class="bg-gold hover:bg-goldLight text-navy px-6 py-2 rounded-none text-sm font-medium tracking-wide transition w-[160px] text-center block">
+        GET IN TOUCH
+      </a>
+    </div>
+
+    <!-- Menu -->
+    <div>
+      <ul class="space-y-2 font-medium text-base">
+        <li><a href="#" class="hover:underline">HOME</a></li>
+        <li><a href="#" class="hover:underline">CONTACT</a></li>
+        <li><a href="#" class="hover:underline">NEWS</a></li>
+        <li><a href="#" class="hover:underline">ABOUT</a></li>
+        <li><a href="#" class="hover:underline">CONCEPT</a></li>
+      </ul>
+    </div>
+
+    <!-- Products -->
+    <div>
+      <span class="font-semibold text-base uppercase block mb-3">PRODUCTS</span>
+      <ul class="space-y-1 text-sm">
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> CASCELLA</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> DALVAZZA</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> LEPORELLO</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> LORRAINE</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> POYA</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> SALGINA</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> SALTI</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> TAMINA</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> TRIFT</a></li>
+      </ul>
+    </div>
+
+    <!-- Infos -->
+    <div>
+      <span class="font-semibold text-base uppercase block mb-3">INFOS</span>
+      <ul class="space-y-1 text-sm">
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> Clinical Affairs</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> Jobs</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> Certificates</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> Terms & Conditions</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> Imprint</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> Bonebridge USA</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span class="mr-2">&rarr;</span> Cookies & Privacy</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+
+</body>
+</html>
