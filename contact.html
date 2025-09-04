@@ -58,7 +58,8 @@
 <header class="relative w-full h-screen bg-black overflow-hidden">
 
   <!-- Background Video -->
-  <video id="bgVideo" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover">
+  <video id="bgVideo" autoplay muted loop playsinline
+    class="absolute inset-0 w-full h-full object-contain md:object-cover bg-black">
     <source src="./assets/hero4.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -106,12 +107,12 @@
 
   <!-- HERO CONTENT (RIGHT-BOTTOM) -->
   <div class="relative z-10 flex justify-end items-end h-full px-6 md:px-[8rem] pb-12 md:pb-24">
-  <h2 class="text-gold text-right text-4xl md:text-6xl leading-tight font-light max-w-[700px]">
-    LET’S START A <br> CONVERSATION <br> TOGETHER
-  </h2>
-</div>
-
+    <h2 class="text-gold text-right text-4xl md:text-6xl leading-tight font-light max-w-[700px]">
+      LET’S START A <br> CONVERSATION <br> TOGETHER
+    </h2>
+  </div>
 </header>
+
 
 <!-- JS for sticky navbar -->
 <script>
@@ -221,38 +222,39 @@
 
 
   <!-- Contact Form Section -->
-  <section class="w-full flex flex-col lg:flex-row min-h-[600px]">
-    <!-- Left: Contact Form -->
-    <div class="bg-white flex flex-col justify-center px-8 md:px-[8rem] py-16 w-full lg:w-1/2 min-h-[600px]">
-      <h2 class="text-navy text-4xl md:text-6xl font-light mb-8 leading-tight">
-        CONTACT US
-      </h2>
-      <p class="text-gold text-lg md:text-2xl mb-12 max-w-xl">
-        Have questions or want to get in touch? Fill out the form below, and we'll respond as soon as possible.
-      </p>
+<section class="w-full flex flex-col-reverse lg:flex-row">
+  <!-- Left: Contact Form -->
+  <div class="bg-white flex flex-col justify-center px-8 md:px-[8rem] py-16 w-full lg:w-1/2 lg:min-h-[600px]">
+    <h2 class="text-navy text-4xl md:text-6xl font-light mb-8 leading-tight">
+      CONTACT US
+    </h2>
+    <p class="text-gold text-lg md:text-2xl mb-12 max-w-xl">
+      Have questions or want to get in touch? Fill out the form below, and we'll respond as soon as possible.
+    </p>
 
-      <!-- Form -->
-      <form class="flex flex-col gap-6">
-        <input type="text" placeholder="Your Name"
-          class="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
-        <input type="email" placeholder="Your Email"
-          class="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
-        <input type="text" placeholder="Subject"
-          class="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
-        <textarea placeholder="Message" rows="5"
-          class="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
-        <button type="submit"
-          class="bg-gold text-white px-6 py-3 w-max rounded-lg hover:bg-goldLight transition-all duration-300">
-          Send Message
-        </button>
-      </form>
-    </div>
+    <!-- Form -->
+    <form class="flex flex-col gap-6">
+      <input type="text" placeholder="Your Name"
+        class="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
+      <input type="email" placeholder="Your Email"
+        class="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
+      <input type="text" placeholder="Subject"
+        class="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" />
+      <textarea placeholder="Message" rows="5"
+        class="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+      <button type="submit"
+        class="bg-gold text-white px-6 py-3 w-max rounded-lg hover:bg-goldLight transition-all duration-300">
+        Send Message
+      </button>
+    </form>
+  </div>
 
-    <!-- Right: Image / Illustration -->
-    <div class="w-full lg:w-1/2 min-h-[600px]">
-      <img src="./assets/orthoimg.png" alt="Contact" class="w-full h-full object-cover " />
-    </div>
-  </section>
+  <!-- Right: Image / Illustration -->
+  <div class="w-full lg:w-1/2 lg:min-h-[600px]">
+    <img src="./assets/orthoimg.png" alt="Contact" class="w-full h-full object-cover" />
+  </div>
+</section>
+
 
 
 
