@@ -43,11 +43,9 @@
 
 
   <!-- Font Awesome CDN (Latest Version with FAB Icons Support) -->
-<link rel="stylesheet" 
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
-      integrity="sha512-60wQ5gM6pS4fZcGEaRkRc3VKhChc1S+OeZAk7FjCTScgCk+U7IV/qJcShIhs5uNdnDqlw7XYV4iXB7LZT8dUtA==" 
-      crossorigin="anonymous" 
-      referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-60wQ5gM6pS4fZcGEaRkRc3VKhChc1S+OeZAk7FjCTScgCk+U7IV/qJcShIhs5uNdnDqlw7XYV4iXB7LZT8dUtA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
@@ -57,79 +55,79 @@
 
 <body class="bg-black text-white">
 
-<!-- HERO SECTION -->
-<header class="relative w-full h-screen bg-black overflow-hidden">
+  <!-- HERO SECTION -->
+  <header class="relative w-full h-screen bg-black overflow-hidden">
 
-  <!-- Background Video -->
-  <video id="bgVideo" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover">
-    <source src="./assets/hero3.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <!-- Background Video -->
+    <video id="bgVideo" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="./assets/hero3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/70"></div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/70"></div>
 
-  <!-- NAVBAR -->
-  <nav id="navbar" class="absolute top-0 left-0 w-full px-6 md:px-[8rem] py-4 z-20 bg-transparent transition-all duration-300">
-    <div class="flex justify-between items-center">
-      <!-- Logo -->
-      <div class="flex flex-col">
-        <h1 class="text-2xl font-bold text-white">SAH <span class="text-gold">Ortho</span></h1>
-        <p class="text-sm text-gray-300">reducing complexity</p>
+    <!-- NAVBAR -->
+    <nav id="navbar"
+      class="absolute top-0 left-0 w-full px-6 md:px-[8rem] py-4 z-20 bg-transparent transition-all duration-300">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex flex-col">
+          <h1 class="text-2xl font-bold text-white">SAH <span class="text-gold">Ortho</span></h1>
+          <p class="text-sm text-gray-300">reducing complexity</p>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white">
+          <li><a href="./index.html" class="hover:text-gold transition">Home</a></li>
+          <li><a href="./about.html" class="hover:text-gold transition">About</a></li>
+          <li><a href="./product.html" class="hover:text-gold transition">Product</a></li>
+          <li><a href="./blogs.html" class="hover:text-gold transition">Blogs</a></li>
+          <li><a href="./contact.html" class="hover:text-gold transition">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-white focus:outline-none">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white">
-        <li><a href="./index.html" class="hover:text-gold transition">Home</a></li>
-        <li><a href="./about.html" class="hover:text-gold transition">About</a></li>
-        <li><a href="./product.html" class="hover:text-gold transition">Product</a></li>
-        <li><a href="./blogs.html" class="hover:text-gold transition">Blogs</a></li>
-        <li><a href="./contact.html" class="hover:text-gold transition">Contact</a></li>
-      </ul>
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden">
+        <a href="./index.html" class="uppercase block hover:text-gold transition">Home</a>
+        <a href="./about.html" class="uppercase block hover:text-gold transition">About</a>
+        <a href="./product.html" class="uppercase block hover:text-gold transition">Product</a>
+        <a href="./blogs.html" class="uppercase block hover:text-gold transition">Blogs</a>
+        <a href="./contact.html" class="uppercase block hover:text-gold transition">Contact</a>
+      </div>
+    </nav>
 
-      <!-- Mobile Menu Button -->
-      <button id="menuBtn" class="md:hidden text-white focus:outline-none">
-        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+    <!-- HERO CONTENT (RIGHT-BOTTOM) -->
+    <div class="relative z-10 flex justify-end items-end h-full px-6 md:px-[8rem] pb-12 md:pb-24">
+      <h2 class="text-gold text-right text-4xl md:text-6xl leading-tight font-light max-w-[700px]">
+        INNOVATIVE <br> SOLUTIONS <br> BUILT FOR YOU
+      </h2>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden">
-      <a href="./index.html" class="uppercase block hover:text-gold transition">Home</a>
-      <a href="./about.html" class="uppercase block hover:text-gold transition">About</a>
-      <a href="./product.html" class="uppercase block hover:text-gold transition">Product</a>
-      <a href="./blogs.html" class="uppercase block hover:text-gold transition">Blogs</a>
-      <a href="./contact.html" class="uppercase block hover:text-gold transition">Contact</a>
-    </div>
-  </nav>
+  </header>
 
-  <!-- HERO CONTENT (RIGHT-BOTTOM) -->
- <div class="relative z-10 flex justify-end items-end h-full px-6 md:px-[8rem] pb-12 md:pb-24">
-  <h2 class="text-gold text-right text-4xl md:text-6xl leading-tight font-light max-w-[700px]">
-    INNOVATIVE <br> SOLUTIONS <br> BUILT FOR YOU
-  </h2>
-</div>
+  <!-- JS for sticky navbar -->
+  <script>
+    const navbar = document.getElementById('navbar');
 
-</header>
-
-<!-- JS for sticky navbar -->
-<script>
-  const navbar = document.getElementById('navbar');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('fixed', 'bg-navy', 'shadow-lg');
-      navbar.classList.remove('absolute', 'bg-transparent');
-    } else {
-      navbar.classList.add('absolute', 'bg-transparent');
-      navbar.classList.remove('fixed', 'bg-navy', 'shadow-lg');
-    }
-  });
-</script>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('fixed', 'bg-navy', 'shadow-lg');
+        navbar.classList.remove('absolute', 'bg-transparent');
+      } else {
+        navbar.classList.add('absolute', 'bg-transparent');
+        navbar.classList.remove('fixed', 'bg-navy', 'shadow-lg');
+      }
+    });
+  </script>
 
 
   <!-- SCRIPT FOR DROPDOWN -->
@@ -158,323 +156,316 @@
 
 
 
-<!-- OUR STREAMLINED IMPLANT PORTFOLIO -->
-<section class="bg-white px-6 md:px-[8rem] py-16">
-  <div class="max-w-7xl mx-auto">
-    <!-- Title -->
-    <h2 class="text-gold text-4xl md:text-6xl font-light mb-6 leading-tight">
-      OUR COMPLETE<br>IMPLANT SOLUTIONS
-    </h2>
-    <!-- Description -->
-    <p class="text-navy text-lg md:text-xl mb-12 max-w-5xl">
-      SAH Ortho offers a comprehensive range of trauma implants and instruments designed to meet the needs of modern orthopaedic surgery. 
-      From small fragment fixation to complex reconstructive solutions, our portfolio ensures strength, precision, and reliability in every procedure.
-    </p>
+  <!-- OUR STREAMLINED IMPLANT PORTFOLIO -->
+  <section class="bg-white px-6 md:px-[8rem] py-16">
+    <div class="max-w-7xl mx-auto">
+      <!-- Title -->
+      <h2 class="text-gold text-4xl md:text-6xl font-light mb-6 leading-tight">
+        OUR COMPLETE<br>IMPLANT SOLUTIONS
+      </h2>
+      <!-- Description -->
+      <p class="text-navy text-lg md:text-xl mb-12 max-w-5xl">
+        SAH Ortho offers a comprehensive range of trauma implants and instruments designed to meet the needs of modern
+        orthopaedic surgery.
+        From small fragment fixation to complex reconstructive solutions, our portfolio ensures strength, precision, and
+        reliability in every procedure.
+      </p>
 
-    <!-- Portfolio Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      
-      <!-- Card 1 -->
-      <div class="border border-gray-200 hover:border-gold transition duration-300 flex flex-col">
-        <img src="./assets/instru1.jpg" alt="Upper Extremity Implants" 
-             class="w-full h-60 object-cover">
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-navy text-2xl font-semibold mb-3">UPPER EXTREMITY</h3>
-          <p class="text-gray-600 text-base flex-grow">
-            A wide range of implants designed for precision and durability in upper extremity trauma cases.
-          </p>
+      <!-- Portfolio Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Card 1 -->
+        <div class="border border-gray-200 hover:border-gold transition duration-300 flex flex-col">
+          <img src="./assets/instru1.jpg" alt="Upper Extremity Implants" class="w-full h-60 object-cover">
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-navy text-2xl font-semibold mb-3">UPPER EXTREMITY</h3>
+            <p class="text-gray-600 text-base flex-grow">
+              A wide range of implants designed for precision and durability in upper extremity trauma cases.
+            </p>
+          </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="border border-gray-200 hover:border-gold transition duration-300 flex flex-col">
+          <img src="./assets/instru2.jpg" alt="Lower Extremity Implants" class="w-full h-60 object-cover">
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-navy text-2xl font-semibold mb-3">LOWER EXTREMITY</h3>
+            <p class="text-gray-600 text-base flex-grow">
+              Reliable solutions for femur, tibia, and other lower extremity fixations ensuring patient safety and
+              recovery.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="border border-gray-200 hover:border-gold transition duration-300 flex flex-col">
+          <img src="./assets/instru3.jpg" alt="Spinal & Speciality Implants" class="w-full h-60 object-cover">
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-navy text-2xl font-semibold mb-3">SPINAL & SPECIALITY</h3>
+            <p class="text-gray-600 text-base flex-grow">
+              Advanced spinal and speciality implants crafted for precision and complex surgical requirements.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TECHNOLOGY SECTION -->
+  <section class="bg-white px-6 md:px-[8rem] py-24">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12">
+
+      <!-- Left: Text -->
+      <div class="flex-1 text-center lg:text-left">
+        <div class="border-t-2 border-navy mb-12 mx-auto lg:mx-0"></div>
+        <h2 class="text-navy text-4xl md:text-6xl font-light mb-8 leading-snug">OUR TECHNOLOGY</h2>
+        <h3 class="text-navy text-xl md:text-2xl font-semibold mb-6">PRECISION ENGINEERED FOR PERFORMANCE</h3>
+        <p class="text-navy text-base md:text-lg mb-6">
+          At SAH Ortho, we combine advanced engineering, high-grade materials, and strict quality control
+          to manufacture world-class orthopaedic implants. Our implants are CNC-machined from certified
+          stainless steel and titanium alloys, ensuring optimal strength, biocompatibility, and longevity.
+        </p>
+        <p class="text-navy text-base md:text-lg">
+          Each product undergoes rigorous mechanical testing and is manufactured in ISO 13485 certified facilities.
+          From anatomical plate contouring to variable-angle locking systems, every innovation is designed
+          to simplify surgery and improve patient outcomes.
+        </p>
+      </div>
+
+
+      <!-- Right: Image + Dots -->
+      <div class="flex-1 flex flex-col items-center">
+        <div
+          class="w-full max-w-sm h-[300px] sm:h-[400px] flex items-center justify-center bg-gray-50 border border-gray-200 mx-auto">
+          <img src="./assets/instru4.jpg" alt="SAH Ortho Technology"
+            class="w-full h-full object-contain transition-all duration-300" id="tech-img">
+        </div>
+        <div class="flex space-x-2 mt-4">
+          <button class="w-3 h-3 rounded-full bg-navy" id="dot-0"></button>
+          <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-1"></button>
+          <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const techImages = [
+      "./assets/instru4.jpg",
+      "./assets/instru5.jpg",
+      "./assets/instru6.jpg"
+    ];
+    const techImg = document.getElementById('tech-img');
+    const dots = [0, 1, 2].map(i => document.getElementById('dot-' + i));
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        techImg.src = techImages[i];
+        dots.forEach((d, idx) => {
+          if (idx === i) {
+            d.classList.add('bg-navy');
+            d.classList.remove('bg-white');
+          } else {
+            d.classList.add('bg-white', 'border', 'border-navy');
+            d.classList.remove('bg-navy');
+          }
+        });
+      });
+    });
+  </script>
+
+
+
+  <!-- FEATURES SECTION -->
+  <section class="bg-white px-6 md:px-[8rem] py-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
+
+      <!-- Card 1 -->
+      <div>
+        <h3 class="text-navy text-xl md:text-2xl font-semibold mb-4">VARIABLE ANGLE LOCKING</h3>
+        <div class="w-full h-[160px] sm:h-[180px] flex items-center justify-center mb-6">
+          <img src="./assets/instru2.jpg" alt="Variable Angle Locking" class="h-full object-contain" />
+        </div>
+        <p class="text-base md:text-lg text-navy leading-relaxed">
+          Our plates feature advanced Variable Angle (VA) locking technology, enabling precise screw
+          placement within a 30° cone of freedom. This flexibility ensures optimal fixation even in
+          challenging anatomical regions.
+        </p>
       </div>
 
       <!-- Card 2 -->
-      <div class="border border-gray-200 hover:border-gold transition duration-300 flex flex-col">
-        <img src="./assets/instru2.jpg" alt="Lower Extremity Implants" 
-             class="w-full h-60 object-cover">
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-navy text-2xl font-semibold mb-3">LOWER EXTREMITY</h3>
-          <p class="text-gray-600 text-base flex-grow">
-            Reliable solutions for femur, tibia, and other lower extremity fixations ensuring patient safety and recovery.
-          </p>
+      <div>
+        <h3 class="text-navy text-xl md:text-2xl font-semibold mb-4">HYBRID FIXATION OPTIONS</h3>
+        <div class="w-full h-[160px] sm:h-[180px] flex items-center justify-center mb-6">
+          <img src="./assets/instru4.jpg" alt="Hybrid Fixation" class="h-full object-contain" />
         </div>
+        <p class="text-base md:text-lg text-navy leading-relaxed">
+          Each hole accommodates both locking and non-locking screws, allowing surgeons to tailor
+          fixation strategies to individual fracture patterns without changing instrumentation.
+        </p>
       </div>
 
       <!-- Card 3 -->
-      <div class="border border-gray-200 hover:border-gold transition duration-300 flex flex-col">
-        <img src="./assets/instru3.jpg" alt="Spinal & Speciality Implants" 
-             class="w-full h-60 object-cover">
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-navy text-2xl font-semibold mb-3">SPINAL & SPECIALITY</h3>
-          <p class="text-gray-600 text-base flex-grow">
-            Advanced spinal and speciality implants crafted for precision and complex surgical requirements.
-          </p>
+      <div>
+        <h3 class="text-navy text-xl md:text-2xl font-semibold mb-4">SECURE DRILLING INTERFACE</h3>
+        <div class="w-full h-[160px] sm:h-[180px] flex items-center justify-center mb-6">
+          <img src="./assets/instru5.jpg" alt="Secure Drilling Interface" class="h-full object-contain" />
         </div>
+        <p class="text-base md:text-lg text-navy leading-relaxed">
+          Precision-engineered drill guides provide a firm “click-fit” engagement with the plate,
+          minimizing skiving and ensuring accuracy during screw insertion.
+        </p>
       </div>
 
     </div>
-  </div>
-</section>
+
+    <!-- Full width bottom border -->
+    <div class="border-b-2 border-navy mt-16"></div>
+  </section>
 
 
-<!-- TECHNOLOGY SECTION -->
-<section class="bg-white px-6 md:px-[8rem] py-24">
-  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12">
-    
-    <!-- Left: Text -->
-<div class="flex-1 text-center lg:text-left">
-  <div class="border-t-2 border-navy mb-12 mx-auto lg:mx-0"></div>
-  <h2 class="text-navy text-4xl md:text-6xl font-light mb-8 leading-snug">OUR TECHNOLOGY</h2>
-  <h3 class="text-navy text-xl md:text-2xl font-semibold mb-6">PRECISION ENGINEERED FOR PERFORMANCE</h3>
-  <p class="text-navy text-base md:text-lg mb-6">
-    At SAH Ortho, we combine advanced engineering, high-grade materials, and strict quality control 
-    to manufacture world-class orthopaedic implants. Our implants are CNC-machined from certified 
-    stainless steel and titanium alloys, ensuring optimal strength, biocompatibility, and longevity.
-  </p>
-  <p class="text-navy text-base md:text-lg">
-    Each product undergoes rigorous mechanical testing and is manufactured in ISO 13485 certified facilities. 
-    From anatomical plate contouring to variable-angle locking systems, every innovation is designed 
-    to simplify surgery and improve patient outcomes.
-  </p>
-</div>
 
 
-    <!-- Right: Image + Dots -->
-    <div class="flex-1 flex flex-col items-center">
-      <div class="w-full max-w-sm h-[300px] sm:h-[400px] flex items-center justify-center bg-gray-50 border border-gray-200 mx-auto">
-        <img src="./assets/instru4.jpg" alt="SAH Ortho Technology" 
-             class="w-full h-full object-contain transition-all duration-300" id="tech-img">
-      </div>
-      <div class="flex space-x-2 mt-4">
-        <button class="w-3 h-3 rounded-full bg-navy" id="dot-0"></button>
-        <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-1"></button>
-        <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-2"></button>
+
+  <section class="bg-white px-4 md:px-[8rem] py-16 border-b-2 border-navy">
+    <div class="max-w-7xl mx-auto">
+      <!-- Heading -->
+      <h2 class="text-gold text-4xl md:text-6xl font-light mb-6">SAH ORTHO PRODUCTS</h2>
+      <div class="border-t-2 border-navy mb-10"></div>
+
+      <!-- Slider Wrapper -->
+      <div class="flex items-center justify-between relative">
+        <!-- Left Arrow -->
+        <button id="prevBtn" class="bg-navy text-white w-10 h-10 flex items-center justify-center flex-shrink-0">
+          &#10094;
+        </button>
+
+        <!-- Slider Content -->
+        <div id="productSlider" class="overflow-hidden flex-1 mx-6">
+          <div id="sliderTrack" class="flex gap-6 transition-transform duration-500">
+
+            <!-- Card 1 -->
+            <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+              <img src="./assets/instru1.jpg" alt="Femoral Distal Locking Plate"
+                class="w-full h-[200px] object-cover mb-4">
+              <h3 class="text-navy text-2xl font-semibold">Femoral Distal Locking Plate</h3>
+              <p class="text-navy text-lg mb-2">Material: SS / TIT</p>
+              <p class="text-navy text-base flex-grow">Available in 5–13 Holes (R/L)</p>
+              <a href="./productsList/plates.html#Locking Implants" class="text-gold font-semibold mt-auto">→ SEE
+                PRODUCT</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+              <img src="./assets/instru2.jpg" alt="LC-DHS Locking Plates" class="w-full h-[200px] object-cover mb-4">
+              <h3 class="text-navy text-2xl font-semibold">130° & 135° LC-DHS Plates</h3>
+              <p class="text-navy text-lg mb-2">Material: SS / TIT</p>
+              <p class="text-navy text-base flex-grow">Barrel: 25mm / 38mm, 4–16 Holes</p>
+              <a href="./productsList/plates.html#Locking Implants" class="text-gold font-semibold mt-auto">→ SEE
+                PRODUCT</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+              <img src="./assets/instru3.jpg" alt="Locking Plates" class="w-full h-[200px] object-cover mb-4">
+              <h3 class="text-navy text-2xl font-semibold">Locking Plates</h3>
+              <p class="text-navy text-lg mb-2">Material: SS / TIT</p>
+              <p class="text-navy text-base flex-grow">Wide range: L-Buttress, T-Plates, Distal Humerus</p>
+              <a href="./productsList/plates.html#Locking Implants" class="text-gold font-semibold mt-auto">→ SEE
+                PRODUCT</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+              <img src="./assets/instru4.jpg" alt="Bone Screws" class="w-full h-[200px] object-cover mb-4">
+              <h3 class="text-navy text-2xl font-semibold">Bone Screws</h3>
+              <p class="text-navy text-lg mb-2">Material: SS / TIT</p>
+              <p class="text-navy text-base flex-grow">Cortical, Cancellous, Herbert, DHS & CC Screws</p>
+              <a href="./productsList/screw&bolt.html#BoneScrews" class="text-gold font-semibold mt-auto">→ SEE
+                PRODUCT</a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+              <img src="./assets/instru5.jpg" alt="Wires and Pins" class="w-full h-[200px] object-cover mb-4">
+              <h3 class="text-navy text-2xl font-semibold">Nails, Wires & Pins</h3>
+              <p class="text-navy text-lg mb-2">Elastic Nails, PFN, Enders</p>
+              <p class="text-navy text-base flex-grow">K-Wires, Schanz Pins, Steinmann Pins</p>
+              <a href="./productsList/screw&bolt.html#Wires&Pins" class="text-gold font-semibold mt-auto">→ SEE
+                PRODUCT</a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+              <img src="./assets/instru6.jpg" alt="Instrument Sets" class="w-full h-[200px] object-cover mb-4">
+              <h3 class="text-navy text-2xl font-semibold">Instrument Sets</h3>
+              <p class="text-navy text-lg mb-2">Complete Surgical Kits</p>
+              <p class="text-navy text-base flex-grow">Tibia/Femur, PFN, DHS, Large & Small Fragment</p>
+              <a href="./productsList/instrumentSet.html#instrument" class="text-gold font-semibold mt-auto">→ SEE
+                PRODUCT</a>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+              <img src="./assets/instru1.jpg" alt="General Instruments" class="w-full h-[200px] object-cover mb-4">
+              <h3 class="text-navy text-2xl font-semibold">General Instruments</h3>
+              <p class="text-navy text-lg mb-2">Precision Tools</p>
+              <p class="text-navy text-base flex-grow">Cutters, Forceps, Reamers, Plate Benders, Fixators</p>
+              <a href="./productsList/instrumentSet.html#genralinstro" class="text-gold font-semibold mt-auto">→ SEE
+                PRODUCT</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button id="nextBtn" class="bg-navy text-white w-10 h-10 flex items-center justify-center flex-shrink-0">
+          &#10095;
+        </button>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  const techImages = [
-    "./assets/instru4.jpg",
-    "./assets/instru5.jpg",
-    "./assets/instru6.jpg"
-  ];
-  const techImg = document.getElementById('tech-img');
-  const dots = [0, 1, 2].map(i => document.getElementById('dot-' + i));
+  <script>
+    const slider = document.getElementById("sliderTrack");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const sliderWrapper = document.getElementById("productSlider");
 
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      techImg.src = techImages[i];
-      dots.forEach((d, idx) => {
-        if (idx === i) {
-          d.classList.add('bg-navy');
-          d.classList.remove('bg-white');
-        } else {
-          d.classList.add('bg-white', 'border', 'border-navy');
-          d.classList.remove('bg-navy');
-        }
+    let index = 0;
+
+    function updateSlider() {
+      const cards = slider.children;
+      const containerWidth = sliderWrapper.offsetWidth;
+      const gap = 24; // gap-6 = 1.5rem = 24px
+
+      let visibleCards = 3;
+      if (window.innerWidth < 768) {
+        visibleCards = 1;
+      } else if (window.innerWidth < 1024) {
+        visibleCards = 2;
+      }
+
+      const totalGap = gap * (visibleCards - 1);
+      const cardWidth = (containerWidth - totalGap) / visibleCards;
+
+      Array.from(cards).forEach(card => {
+        card.style.width = cardWidth + "px";
       });
-    });
-  });
-</script>
 
+      slider.style.transform = `translateX(${-index * (cardWidth + gap)}px)`;
 
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index >= cards.length - visibleCards;
+    }
 
-<!-- FEATURES SECTION -->
-<section class="bg-white px-6 md:px-[8rem] py-16">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
-    
-    <!-- Card 1 -->
-    <div>
-      <h3 class="text-navy text-xl md:text-2xl font-semibold mb-4">VARIABLE ANGLE LOCKING</h3>
-      <div class="w-full h-[160px] sm:h-[180px] flex items-center justify-center mb-6">
-        <img src="./assets/instru2.jpg" alt="Variable Angle Locking" class="h-full object-contain" />
-      </div>
-      <p class="text-base md:text-lg text-navy leading-relaxed">
-        Our plates feature advanced Variable Angle (VA) locking technology, enabling precise screw 
-        placement within a 30° cone of freedom. This flexibility ensures optimal fixation even in 
-        challenging anatomical regions.
-      </p>
-    </div>
-
-    <!-- Card 2 -->
-    <div>
-      <h3 class="text-navy text-xl md:text-2xl font-semibold mb-4">HYBRID FIXATION OPTIONS</h3>
-      <div class="w-full h-[160px] sm:h-[180px] flex items-center justify-center mb-6">
-        <img src="./assets/instru4.jpg" alt="Hybrid Fixation" class="h-full object-contain" />
-      </div>
-      <p class="text-base md:text-lg text-navy leading-relaxed">
-        Each hole accommodates both locking and non-locking screws, allowing surgeons to tailor 
-        fixation strategies to individual fracture patterns without changing instrumentation.
-      </p>
-    </div>
-
-    <!-- Card 3 -->
-    <div>
-      <h3 class="text-navy text-xl md:text-2xl font-semibold mb-4">SECURE DRILLING INTERFACE</h3>
-      <div class="w-full h-[160px] sm:h-[180px] flex items-center justify-center mb-6">
-        <img src="./assets/instru5.jpg" alt="Secure Drilling Interface" class="h-full object-contain" />
-      </div>
-      <p class="text-base md:text-lg text-navy leading-relaxed">
-        Precision-engineered drill guides provide a firm “click-fit” engagement with the plate, 
-        minimizing skiving and ensuring accuracy during screw insertion.
-      </p>
-    </div>
-
-  </div>
-
-  <!-- Full width bottom border -->
-  <div class="border-b-2 border-navy mt-16"></div>
-</section>
-
-
-
-
-
-<section class="bg-white px-4 md:px-[8rem] py-16 border-b-2 border-navy">
-  <div class="max-w-7xl mx-auto">
-    <!-- Heading -->
-    <h2 class="text-gold text-4xl md:text-6xl font-light mb-6">SAH ORTHO PRODUCTS</h2>
-    <div class="border-t-2 border-navy mb-10"></div>
-
-    <!-- Slider Wrapper -->
-    <div class="flex items-center justify-between relative">
-      <!-- Left Arrow -->
-      <button id="prevBtn"
-        class="bg-navy text-white w-10 h-10 flex items-center justify-center flex-shrink-0">
-        &#10094;
-      </button>
-
-      <!-- Slider Content -->
-      <div id="productSlider" class="overflow-hidden flex-1 mx-6">
-        <div id="sliderTrack" class="flex gap-6 transition-transform duration-500">
-
-          <!-- Card 1 -->
-          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
-            <img src="./assets/instru1.jpg" alt="Femoral Distal Locking Plate"
-              class="w-full h-[200px] object-cover mb-4">
-            <h3 class="text-navy text-2xl font-semibold">Femoral Distal Locking Plate</h3>
-            <p class="text-navy text-lg mb-2">Material: SS / TIT</p>
-            <p class="text-navy text-base flex-grow">Available in 5–13 Holes (R/L)</p>
-            <a href="./productsList/plates.html#Locking Implants"
-              class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
-            <img src="./assets/instru2.jpg" alt="LC-DHS Locking Plates"
-              class="w-full h-[200px] object-cover mb-4">
-            <h3 class="text-navy text-2xl font-semibold">130° & 135° LC-DHS Plates</h3>
-            <p class="text-navy text-lg mb-2">Material: SS / TIT</p>
-            <p class="text-navy text-base flex-grow">Barrel: 25mm / 38mm, 4–16 Holes</p>
-            <a href="./productsList/plates.html#Locking Implants"
-              class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
-            <img src="./assets/instru3.jpg" alt="Locking Plates"
-              class="w-full h-[200px] object-cover mb-4">
-            <h3 class="text-navy text-2xl font-semibold">Locking Plates</h3>
-            <p class="text-navy text-lg mb-2">Material: SS / TIT</p>
-            <p class="text-navy text-base flex-grow">Wide range: L-Buttress, T-Plates, Distal Humerus</p>
-            <a href="./productsList/plates.html#Locking Implants"
-              class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
-            <img src="./assets/instru4.jpg" alt="Bone Screws"
-              class="w-full h-[200px] object-cover mb-4">
-            <h3 class="text-navy text-2xl font-semibold">Bone Screws</h3>
-            <p class="text-navy text-lg mb-2">Material: SS / TIT</p>
-            <p class="text-navy text-base flex-grow">Cortical, Cancellous, Herbert, DHS & CC Screws</p>
-            <a href="./productsList/screw&bolt.html#BoneScrews"
-              class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
-            <img src="./assets/instru5.jpg" alt="Wires and Pins"
-              class="w-full h-[200px] object-cover mb-4">
-            <h3 class="text-navy text-2xl font-semibold">Nails, Wires & Pins</h3>
-            <p class="text-navy text-lg mb-2">Elastic Nails, PFN, Enders</p>
-            <p class="text-navy text-base flex-grow">K-Wires, Schanz Pins, Steinmann Pins</p>
-            <a href="./productsList/screw&bolt.html#Wires&Pins"
-              class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
-            <img src="./assets/instru6.jpg" alt="Instrument Sets"
-              class="w-full h-[200px] object-cover mb-4">
-            <h3 class="text-navy text-2xl font-semibold">Instrument Sets</h3>
-            <p class="text-navy text-lg mb-2">Complete Surgical Kits</p>
-            <p class="text-navy text-base flex-grow">Tibia/Femur, PFN, DHS, Large & Small Fragment</p>
-            <a href="./productsList/instrumentSet.html#instrument"
-              class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
-          </div>
-
-          <!-- Card 7 -->
-          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
-            <img src="./assets/instru1.jpg" alt="General Instruments"
-              class="w-full h-[200px] object-cover mb-4">
-            <h3 class="text-navy text-2xl font-semibold">General Instruments</h3>
-            <p class="text-navy text-lg mb-2">Precision Tools</p>
-            <p class="text-navy text-base flex-grow">Cutters, Forceps, Reamers, Plate Benders, Fixators</p>
-            <a href="./productsList/instrumentSet.html#genralinstro"
-              class="text-gold font-semibold mt-auto">→ SEE PRODUCT</a>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Right Arrow -->
-      <button id="nextBtn"
-        class="bg-navy text-white w-10 h-10 flex items-center justify-center flex-shrink-0">
-        &#10095;
-      </button>
-    </div>
-  </div>
-</section>
-
-<script>
-const slider = document.getElementById("sliderTrack");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const sliderWrapper = document.getElementById("productSlider");
-
-let index = 0;
-
-function updateSlider() {
-  const cards = slider.children;
-  const containerWidth = sliderWrapper.offsetWidth;
-  const gap = 24; // gap-6 = 1.5rem = 24px
-
-  let visibleCards = 3;
-  if (window.innerWidth < 768) {
-    visibleCards = 1;
-  } else if (window.innerWidth < 1024) {
-    visibleCards = 2;
-  }
-
-  const totalGap = gap * (visibleCards - 1);
-  const cardWidth = (containerWidth - totalGap) / visibleCards;
-
-  Array.from(cards).forEach(card => {
-    card.style.width = cardWidth + "px";
-  });
-
-  slider.style.transform = `translateX(${-index * (cardWidth + gap)}px)`;
-
-  prevBtn.disabled = index === 0;
-  nextBtn.disabled = index >= cards.length - visibleCards;
-}
-
-nextBtn.addEventListener("click", () => { index++; updateSlider(); });
-prevBtn.addEventListener("click", () => { index--; updateSlider(); });
-window.addEventListener("resize", updateSlider);
-updateSlider();
-</script>
+    nextBtn.addEventListener("click", () => { index++; updateSlider(); });
+    prevBtn.addEventListener("click", () => { index--; updateSlider(); });
+    window.addEventListener("resize", updateSlider);
+    updateSlider();
+  </script>
 
 
 
@@ -482,8 +473,8 @@ updateSlider();
 
 
 
-<!-- Hide scrollbar -->
-<!-- <style>
+  <!-- Hide scrollbar -->
+  <!-- <style>
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 </style> -->
@@ -496,26 +487,26 @@ updateSlider();
 
 
   <!-- FOOTER -->
-<footer class="bg-navy text-gold pt-16 pb-8 px-8 md:px-[8rem]">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+  <footer class="bg-navy text-gold pt-16 pb-8 px-8 md:px-[8rem]">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
 
-    <!-- Column 1: Social + Button -->
-    <div class="flex flex-col items-center md:items-start space-y-8">
-      <div>
-        <span class="uppercase tracking-wide text-sm font-medium mb-3 block">Follow us</span>
-        <div class="flex justify-center md:justify-start space-x-2 mt-2">
+      <!-- Column 1: Social + Button -->
+      <div class="flex flex-col items-center md:items-start space-y-8">
+        <div>
+          <span class="uppercase tracking-wide text-sm font-medium mb-3 block">Follow us</span>
+          <div class="flex justify-center md:justify-start space-x-2 mt-2">
 
-          <!-- LinkedIn -->
-          <a href="#" aria-label="LinkedIn"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.04 0 3.602 2.001 3.602 4.601v5.595z" />
-            </svg>
-          </a>
+            <!-- LinkedIn -->
+            <a href="#" aria-label="LinkedIn"
+              class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.04 0 3.602 2.001 3.602 4.601v5.595z" />
+              </svg>
+            </a>
 
-          <!-- YouTube -->
-          <!-- <a href="#" aria-label="YouTube"
+            <!-- YouTube -->
+            <!-- <a href="#" aria-label="YouTube"
             class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -523,90 +514,90 @@ updateSlider();
             </svg>
           </a> -->
 
-          <!-- Facebook -->
-          <a href="#" aria-label="Facebook"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12" />
-            </svg>
-          </a>
+            <!-- Facebook -->
+            <a href="#" aria-label="Facebook"
+              class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12" />
+              </svg>
+            </a>
 
-          <!-- Twitter -->
-          <a href="#" aria-label="Twitter"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M22.46 6c-.77.35-1.6.59-2.46.7a4.25 4.25 0 0 0 1.88-2.35 8.45 8.45 0 0 1-2.7 1.03 4.23 4.23 0 0 0-7.2 3.86 12 12 0 0 1-8.7-4.4 4.23 4.23 0 0 0 1.3 5.65 4.2 4.2 0 0 1-1.9-.5v.05a4.23 4.23 0 0 0 3.4 4.15 4.2 4.2 0 0 1-1.9.07 4.23 4.23 0 0 0 4 3 8.5 8.5 0 0 1-5.3 1.8A8.64 8.64 0 0 1 2 19.54a12 12 0 0 0 6.5 1.9c7.8 0 12.1-6.5 12.1-12.1v-.55c.83-.6 1.6-1.4 2.2-2.3z" />
-            </svg>
-          </a>
+            <!-- Twitter -->
+            <a href="#" aria-label="Twitter"
+              class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22.46 6c-.77.35-1.6.59-2.46.7a4.25 4.25 0 0 0 1.88-2.35 8.45 8.45 0 0 1-2.7 1.03 4.23 4.23 0 0 0-7.2 3.86 12 12 0 0 1-8.7-4.4 4.23 4.23 0 0 0 1.3 5.65 4.2 4.2 0 0 1-1.9-.5v.05a4.23 4.23 0 0 0 3.4 4.15 4.2 4.2 0 0 1-1.9.07 4.23 4.23 0 0 0 4 3 8.5 8.5 0 0 1-5.3 1.8A8.64 8.64 0 0 1 2 19.54a12 12 0 0 0 6.5 1.9c7.8 0 12.1-6.5 12.1-12.1v-.55c.83-.6 1.6-1.4 2.2-2.3z" />
+              </svg>
+            </a>
 
-          <!-- Instagram -->
-          <a href="#" aria-label="Instagram"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.1-.3 2.3-.4 1.3-.1 1.7-.1 4.9-.1m0-2.2C8.7 0 8.3 0 7 0 5.7 0 4.7.1 4 0.3c-.8.2-1.5.5-2.1 1.1-.6.6-.9 1.3-1.1 2.1C.6 4.2.5 5.2.5 6.5.5 7.8.5 8.2.5 12s0 4.2.1 5.5c.1 1.3.2 2.3.4 3.1.2.8.5 1.5 1.1 2.1.6.6 1.3.9 2.1 1.1.8.2 1.8.3 3.1.4 1.3.1 1.7.1 5.5.1s4.2 0 5.5-.1c1.3-.1 2.3-.2 3.1-.4.8-.2 1.5-.5 2.1-1.1.6-.6.9-1.3 1.1-2.1.2-.8.3-1.8.4-3.1.1-1.3.1-1.7.1-5.5s0-4.2-.1-5.5c-.1-1.3-.2-2.3-.4-3.1-.2-.8-.5-1.5-1.1-2.1-.6-.6-1.3-.9-2.1-1.1-.8-.2-1.8-.3-3.1-.4C16.2.1 15.8 0 12 0z" />
-              <circle cx="12" cy="12" r="3.2" />
-            </svg>
-          </a>
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram"
+              class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.1-.3 2.3-.4 1.3-.1 1.7-.1 4.9-.1m0-2.2C8.7 0 8.3 0 7 0 5.7 0 4.7.1 4 0.3c-.8.2-1.5.5-2.1 1.1-.6.6-.9 1.3-1.1 2.1C.6 4.2.5 5.2.5 6.5.5 7.8.5 8.2.5 12s0 4.2.1 5.5c.1 1.3.2 2.3.4 3.1.2.8.5 1.5 1.1 2.1.6.6 1.3.9 2.1 1.1.8.2 1.8.3 3.1.4 1.3.1 1.7.1 5.5.1s4.2 0 5.5-.1c1.3-.1 2.3-.2 3.1-.4.8-.2 1.5-.5 2.1-1.1.6-.6.9-1.3 1.1-2.1.2-.8.3-1.8.4-3.1.1-1.3.1-1.7.1-5.5s0-4.2-.1-5.5c-.1-1.3-.2-2.3-.4-3.1-.2-.8-.5-1.5-1.1-2.1-.6-.6-1.3-.9-2.1-1.1-.8-.2-1.8-.3-3.1-.4C16.2.1 15.8 0 12 0z" />
+                <circle cx="12" cy="12" r="3.2" />
+              </svg>
+            </a>
+          </div>
         </div>
+        <a href="./contact.html"
+          class="bg-gold hover:bg-goldLight text-navy px-6 py-2 rounded-none text-sm font-medium tracking-wide transition w-[160px] text-center block">
+          GET IN TOUCH
+        </a>
       </div>
-      <a href="./contact.html"
-        class="bg-gold hover:bg-goldLight text-navy px-6 py-2 rounded-none text-sm font-medium tracking-wide transition w-[160px] text-center block">
-        GET IN TOUCH
-      </a>
-    </div>
 
-    <!-- Column 2: Main Menu -->
-    <div>
-      <span class="font-semibold text-base uppercase block mb-3">MENU</span>
-      <ul class="space-y-1  text-sm">
-        <li><a href="./index.html" class="hover:underline">Home</a></li>
-        <li><a href="./about.html" class="hover:underline">About</a></li>
-        <li><a href="./product.html" class="hover:underline">Product</a></li>
-        <li><a href="./blogs.html" class="hover:underline">Blog</a></li>
-        <li><a href="./contact.html" class="hover:underline">Contact</a></li>
-        <li><a href="./terms.html" class="hover:underline">Terms & Conditions</a></li>
-        <li><a href="./privacy.html" class="hover:underline">Privacy Policy</a></li>
-      </ul>
-    </div>
+      <!-- Column 2: Main Menu -->
+      <div>
+        <span class="font-semibold text-base uppercase block mb-3">MENU</span>
+        <ul class="space-y-1  text-sm">
+          <li><a href="./index.html" class="hover:underline">Home</a></li>
+          <li><a href="./about.html" class="hover:underline">About</a></li>
+          <li><a href="./product.html" class="hover:underline">Product</a></li>
+          <li><a href="./blogs.html" class="hover:underline">Blog</a></li>
+          <li><a href="./contact.html" class="hover:underline">Contact</a></li>
+          <li><a href="./terms.html" class="hover:underline">Terms & Conditions</a></li>
+          <li><a href="./privacy.html" class="hover:underline">Privacy Policy</a></li>
+        </ul>
+      </div>
 
-    <!-- Column 3: Products -->
-    <div>
-      <span class="font-semibold text-base uppercase block mb-3">PRODUCTS</span>
-      <ul class="space-y-1 text-sm">
-        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-              class="mr-2">&rarr;</span> Femoral Locking Plates</a></li>
-        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-              class="mr-2">&rarr;</span> Proximal Femur LCP Plates</a></li>
-        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-              class="mr-2">&rarr;</span> Clavicle Hook Plates</a></li>
-        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-              class="mr-2">&rarr;</span> Cortical & Cancellous Screws</a></li>
-        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-              class="mr-2">&rarr;</span> PFN Nails & Locking Bolts</a></li>
-        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-              class="mr-2">&rarr;</span> Instrument Sets</a></li>
-        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-              class="mr-2">&rarr;</span> External Fixation Systems</a></li>
-      </ul>
-    </div>
+      <!-- Column 3: Products -->
+      <div>
+        <span class="font-semibold text-base uppercase block mb-3">PRODUCTS</span>
+        <ul class="space-y-1 text-sm">
+          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+                class="mr-2">&rarr;</span> Femoral Locking Plates</a></li>
+          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+                class="mr-2">&rarr;</span> Proximal Femur LCP Plates</a></li>
+          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+                class="mr-2">&rarr;</span> Clavicle Hook Plates</a></li>
+          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+                class="mr-2">&rarr;</span> Cortical & Cancellous Screws</a></li>
+          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+                class="mr-2">&rarr;</span> PFN Nails & Locking Bolts</a></li>
+          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+                class="mr-2">&rarr;</span> Instrument Sets</a></li>
+          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+                class="mr-2">&rarr;</span> External Fixation Systems</a></li>
+        </ul>
+      </div>
 
-    <!-- Column 4: Contact Info -->
-    <div>
-      <span class="font-semibold text-base uppercase block mb-3">Contact</span>
-      <p class="text-sm text-center md:text-left">
-        House No. 27, Kh No. 136/2, Peepal Wala Mohalla, Near Bank of Baroda, Badli, North West Delhi,
-        Delhi, 110042<br>
-        Phone: +91 98765 43210<br>
-        Email: info@bonebridge.com<br>
-        Mon–Sat: 9:00am – 6:00pm
-      </p>
-    </div>
+      <!-- Column 4: Contact Info -->
+      <div>
+        <span class="font-semibold text-base uppercase block mb-3">Contact</span>
+        <p class="text-sm text-center md:text-left">
+          House No. 27, Kh No. 136/2, Peepal Wala Mohalla, Near Bank of Baroda, Badli, North West Delhi,
+          Delhi, 110042<br>
+          Phone: +91 98765 43210<br>
+          Email: info@bonebridge.com<br>
+          Mon–Sat: 9:00am – 6:00pm
+        </p>
+      </div>
 
-  </div>
-</footer>
+    </div>
+  </footer>
 
 
 
