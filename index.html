@@ -67,16 +67,18 @@
   <div class="absolute inset-0 bg-black/70"></div>
 
   <!-- NAVBAR -->
-  <nav id="navbar" class="absolute top-0 left-0 w-full px-6 md:px-[8rem] py-4 z-20 bg-transparent transition-all duration-300">
+  <nav id="navbar"
+    class="absolute top-0 left-0 w-full px-6 md:px-[8rem] py-4 z-20 bg-transparent transition-all duration-300">
     <div class="flex justify-between items-center">
       <!-- Logo -->
       <div class="flex items-center">
-  <img src="./assets/orthologo1-removebg-preview.png" alt="SAH Ortho Logo" class="h-12 w-auto">
-</div>
-
+        <img src="./assets/orthologo1-removebg-preview.png" alt="SAH Ortho Logo"
+          class="h-12 w-auto transition-all duration-300" id="logo">
+      </div>
 
       <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white">
+      <ul id="navLinks"
+        class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white transition-all duration-300">
         <li><a href="./index.html" class="hover:text-gold transition">Home</a></li>
         <li><a href="./about.html" class="hover:text-gold transition">About</a></li>
         <li><a href="./product.html" class="hover:text-gold transition">Product</a></li>
@@ -85,7 +87,7 @@
       </ul>
 
       <!-- Mobile Menu Button -->
-      <button id="menuBtn" class="md:hidden text-white focus:outline-none">
+      <button id="menuBtn" class="md:hidden text-white focus:outline-none transition-all duration-300">
         <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
           stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -95,7 +97,8 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden">
+    <div id="mobileMenu"
+      class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden transition-all duration-300">
       <a href="./index.html" class="uppercase block hover:text-gold transition">Home</a>
       <a href="./about.html" class="uppercase block hover:text-gold transition">About</a>
       <a href="./product.html" class="uppercase block hover:text-gold transition">Product</a>
@@ -112,44 +115,57 @@
   </div>
 </header>
 
-<!-- JS for sticky navbar -->
+<!-- ✅ JS for sticky navbar -->
 <script>
   const navbar = document.getElementById('navbar');
+  const navLinks = document.getElementById('navLinks');
+  const menuBtn = document.getElementById('menuBtn');
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      navbar.classList.add('fixed', 'bg-navy', 'shadow-lg');
+      navbar.classList.add('fixed', 'bg-white', 'shadow-lg');
       navbar.classList.remove('absolute', 'bg-transparent');
+
+      navLinks.classList.remove('text-white');
+      navLinks.classList.add('text-navy');
+
+      menuBtn.classList.remove('text-white');
+      menuBtn.classList.add('text-navy');
     } else {
       navbar.classList.add('absolute', 'bg-transparent');
-      navbar.classList.remove('fixed', 'bg-navy', 'shadow-lg');
+      navbar.classList.remove('fixed', 'bg-white', 'shadow-lg');
+
+      navLinks.classList.add('text-white');
+      navLinks.classList.remove('text-navy');
+
+      menuBtn.classList.add('text-white');
+      menuBtn.classList.remove('text-navy');
     }
   });
 </script>
 
+<!-- SCRIPT FOR DROPDOWN -->
+<script>
+  const menuIcon = document.getElementById('menuIcon');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-  <!-- SCRIPT FOR DROPDOWN -->
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.innerHTML = mobileMenu.classList.contains('hidden')
+      ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>'
+      : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+  });
+</script>
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      menuIcon.innerHTML = mobileMenu.classList.contains('hidden')
-        ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>'
-        : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
-    });
-  </script>
+<!-- Background video freeze on last frame -->
+<script>
+  const video = document.getElementById('bgVideo');
+  video.addEventListener('ended', () => {
+    video.pause();
+    video.currentTime = video.duration; // Hold on last frame
+  });
+</script>
 
-
-  <script>
-    const video = document.getElementById('bgVideo');
-    video.addEventListener('ended', () => {
-      video.pause();
-      video.currentTime = video.duration; // Hold on last frame
-    });
-  </script>
 
 
 
@@ -271,129 +287,137 @@
 
   <!-- ...existing code... -->
 
-  <section class="bg-white text-navy px-8 md:px-[8rem] py-20 relative">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-6xl font-light mb-12 leading-tight">
-        REDUCING COMPLEXITY IN A NUTSHELL: <span class="font-normal">OUR PRODUCTS</span>
-      </h2>
+ <section class="bg-white text-navy px-8 md:px-[8rem] py-20 relative">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Heading -->
+    <h2 class="text-[clamp(1.75rem,4vw,3.5rem)] font-light mb-12 leading-tight">
+      REDUCING COMPLEXITY IN A NUTSHELL: <span class="font-normal">OUR PRODUCTS</span>
+    </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-stretch">
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-stretch">
 
-        <!-- PLATES -->
-        <div class="flex flex-col justify-between h-full">
-          <div>
-            <h3 class="text-2xl md:text-3xl font-light border-b border-navy w-full pb-2 mb-6">PLATES</h3>
-            <p class="text-lg md:text-xl mb-8">
-              A comprehensive range of SS & TIT plates engineered for precision and versatility in trauma care.
-            </p>
+      <!-- PLATES -->
+      <div class="flex flex-col justify-between h-full">
+        <div>
+          <h3
+            class="text-[clamp(1.25rem,2vw,1.75rem)] font-light whitespace-nowrap border-b border-navy w-full pb-2 mb-6">
+            PLATES
+          </h3>
+          <p class="text-[clamp(1rem,1.5vw,1.25rem)] mb-8">
+            A comprehensive range of SS & TIT plates engineered for precision and versatility in trauma care.
+          </p>
+        </div>
+
+        <div class="w-full flex flex-col items-center mt-auto">
+          <div class="relative w-44 md:w-52 h-56 flex items-center justify-center overflow-hidden">
+            <img class="plates-slider-img w-full h-full object-contain transition-all duration-300"
+              src="./assets/instru1.jpg" alt="Plates">
           </div>
-          <div class="w-full flex flex-col items-center mt-auto">
-            <div class="relative w-44 md:w-52 h-56 flex items-center justify-center overflow-hidden">
-              <img class="plates-slider-img w-full h-full object-contain transition-all duration-300"
-                src="./assets/instru1.jpg" alt="Plates">
-            </div>
-            <!-- <button onclick="openOverlay('plates')"
-              class="mt-8 w-full text-left flex items-center justify-between text-lg font-semibold text-navy hover:underline">
+
+          <a href="./productsList/plates.html">
+            <button
+              class="mt-8 w-full text-left flex items-center justify-between 
+                     text-[clamp(0.95rem,1.2vw,1.125rem)] font-semibold 
+                     text-navy hover:underline whitespace-nowrap">
               &rarr; FULL PLATES PORTFOLIO
-            </button> -->
-
-           <a href="./productsList/plates.html">
-              <button 
-              class="mt-8 w-full text-left flex items-center justify-between text-lg font-semibold text-navy hover:underline">
-              &rarr; FULL PLATES PORTFOLIO
             </button>
-           </a>
-            <div class="flex justify-center mt-6 space-x-2 w-full">
-              <button class="plates-dot w-3 h-3 rounded-full bg-grayLight" data-index="0"></button>
-              <button class="plates-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="1"></button>
-              <button class="plates-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="2"></button>
-            </div>
-            <div class="border-b-2 border-navy w-full mt-6"></div>
+          </a>
+
+          <div class="flex justify-center mt-6 space-x-2 w-full">
+            <button class="plates-dot w-3 h-3 rounded-full bg-grayLight" data-index="0"></button>
+            <button class="plates-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="1"></button>
+            <button class="plates-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="2"></button>
           </div>
+          <div class="border-b-2 border-navy w-full mt-6"></div>
+        </div>
+      </div>
+
+      <!-- SCREWS -->
+      <div class="flex flex-col justify-between h-full">
+        <div>
+          <h3
+            class="text-[clamp(1.25rem,2vw,1.75rem)] font-light whitespace-nowrap border-b border-navy w-full pb-2 mb-6">
+            SCREWS & BOLTS
+          </h3>
+          <p class="text-[clamp(1rem,1.5vw,1.25rem)] mb-8">
+            High-strength screws and locking bolts for stable fixation across multiple indications.
+          </p>
         </div>
 
-        <!-- SCREWS -->
-        <div class="flex flex-col justify-between h-full">
-          <div>
-            <h3 class="text-2xl md:text-3xl font-light border-b border-navy w-full pb-2 mb-6">SCREWS & BOLTS</h3>
-            <p class="text-lg md:text-xl mb-8">
-              High-strength screws and locking bolts for stable fixation across multiple indications.
-            </p>
+        <div class="w-full flex flex-col items-center mt-auto">
+          <div class="relative w-44 md:w-52 h-56 flex items-center justify-center overflow-hidden">
+            <img class="screws-slider-img w-full h-full object-contain transition-all duration-300"
+              src="./assets/instru2.jpg" alt="Screws">
           </div>
-          <div class="w-full flex flex-col items-center mt-auto">
-            <div class="relative w-44 md:w-52 h-56 flex items-center justify-center overflow-hidden">
-              <img class="screws-slider-img w-full h-full object-contain transition-all duration-300"
-                src="./assets/instru2.jpg" alt="Screws">
-            </div>
-            <!-- <button onclick="openOverlay('screws')"
-              class="mt-8 w-full text-left flex items-center justify-between text-lg font-semibold text-navy hover:underline">
-              &rarr; COMPLETE SCREWS RANGE
-            </button> -->
 
-
-               <a href="./productsList/screw&bolt.html">
-                <button 
-              class="mt-8 w-full text-left flex items-center justify-between text-lg font-semibold text-navy hover:underline">
+          <a href="./productsList/screw&bolt.html">
+            <button
+              class="mt-8 w-full text-left flex items-center justify-between 
+                     text-[clamp(0.95rem,1.2vw,1.125rem)] font-semibold 
+                     text-navy hover:underline whitespace-nowrap">
               &rarr; COMPLETE SCREWS RANGE
             </button>
-               </a>
+          </a>
 
-
-            <div class="flex justify-center mt-6 space-x-2 w-full">
-              <button class="screws-dot w-3 h-3 rounded-full bg-grayLight" data-index="0"></button>
-              <button class="screws-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="1"></button>
-              <button class="screws-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="2"></button>
-            </div>
-            <div class="border-b-2 border-navy w-full mt-6"></div>
+          <div class="flex justify-center mt-6 space-x-2 w-full">
+            <button class="screws-dot w-3 h-3 rounded-full bg-grayLight" data-index="0"></button>
+            <button class="screws-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="1"></button>
+            <button class="screws-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="2"></button>
           </div>
+          <div class="border-b-2 border-navy w-full mt-6"></div>
+        </div>
+      </div>
+
+      <!-- INSTRUMENTS -->
+      <div class="flex flex-col justify-between h-full">
+        <div>
+          <h3
+            class="text-[clamp(1.25rem,2vw,1.75rem)] font-light whitespace-nowrap border-b border-navy w-full pb-2 mb-6">
+            INSTRUMENTS & SETS
+          </h3>
+          <p class="text-[clamp(1rem,1.5vw,1.25rem)] mb-8">
+            Optimized surgical tools and instrument sets designed for efficiency.
+          </p>
         </div>
 
-        <!-- INSTRUMENTS -->
-        <div class="flex flex-col justify-between h-full">
-          <div>
-            <h3 class="text-2xl md:text-3xl font-light border-b border-navy w-full pb-2 mb-6">INSTRUMENTS & SETS</h3>
-            <p class="text-lg md:text-xl mb-8">
-              Optimized surgical tools and instrument sets designed for efficiency.
-            </p>
+        <div class="w-full flex flex-col items-center mt-auto">
+          <div class="relative w-44 md:w-52 h-56 flex items-center justify-center overflow-hidden">
+            <img class="instruments-slider-img w-full h-full object-contain transition-all duration-300"
+              src="./assets/instru3.jpg" alt="Instruments">
           </div>
-          <div class="w-full flex flex-col items-center mt-auto">
-            <div class="relative w-44 md:w-52 h-56 flex items-center justify-center overflow-hidden">
-              <img class="instruments-slider-img w-full h-full object-contain transition-all duration-300"
-                src="./assets/instru3.jpg" alt="Instruments">
-            </div>
-            <!-- <button onclick="openOverlay('instruments')"
-              class="mt-8 w-full text-left flex items-center justify-between text-lg font-semibold text-navy hover:underline">
-              &rarr; ALL INSTRUMENT SETS
-            </button> -->
-            <a href="./productsList/instrumentSet.html">
-               <button 
-              class="mt-8 w-full text-left flex items-center justify-between text-lg font-semibold text-navy hover:underline">
+
+          <a href="./productsList/instrumentSet.html">
+            <button
+              class="mt-8 w-full text-left flex items-center justify-between 
+                     text-[clamp(0.95rem,1.2vw,1.125rem)] font-semibold 
+                     text-navy hover:underline whitespace-nowrap">
               &rarr; ALL INSTRUMENT SETS
             </button>
-            </a>
+          </a>
 
-            <div class="flex justify-center mt-6 space-x-2 w-full">
-              <button class="instruments-dot w-3 h-3 rounded-full bg-grayLight" data-index="0"></button>
-              <button class="instruments-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="1"></button>
-              <button class="instruments-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="2"></button>
-            </div>
-            <div class="border-b-2 border-navy w-full mt-6"></div>
+          <div class="flex justify-center mt-6 space-x-2 w-full">
+            <button class="instruments-dot w-3 h-3 rounded-full bg-grayLight" data-index="0"></button>
+            <button class="instruments-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="1"></button>
+            <button class="instruments-dot w-3 h-3 rounded-full bg-grayLight/30" data-index="2"></button>
           </div>
+          <div class="border-b-2 border-navy w-full mt-6"></div>
         </div>
-
       </div>
     </div>
+  </div>
 
-    <!-- OVERLAY -->
-    <div id="overlay" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
-      <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-6 relative animate-fadeIn">
-        <button onclick="closeOverlay()"
-          class="absolute top-3 right-4 text-2xl font-bold text-gray-600 hover:text-black">&times;</button>
-        <h3 id="overlay-title" class="text-2xl font-semibold mb-4 text-navy"></h3>
-        <ul id="overlay-list" class="list-disc list-inside space-y-2 text-gray-700"></ul>
-      </div>
+  <!-- OVERLAY -->
+  <div id="overlay" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-6 relative animate-fadeIn">
+      <button onclick="closeOverlay()"
+        class="absolute top-3 right-4 text-2xl font-bold text-gray-600 hover:text-black">&times;</button>
+      <h3 id="overlay-title" class="text-2xl font-semibold mb-4 text-navy"></h3>
+      <ul id="overlay-list" class="list-disc list-inside space-y-2 text-gray-700"></ul>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <script>
     const data = {
@@ -591,7 +615,7 @@
 
 
   <!-- FOOTER -->
-<footer class="bg-navy text-goldLight pt-16 pb-8 px-8 md:px-[8rem]">
+<footer class="bg-black text-goldLight pt-16 pb-8 px-8 md:px-[8rem]">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
 
     <!-- Column 1: Social + Button -->
