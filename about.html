@@ -10,16 +10,16 @@
 
 
 
-  <script>
+    <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            gold: "#B8981E",
-            goldLight: "#E6D6A8",
-            navy: "#0D2233",
+            gold: "#be8455",
+            goldLight: "#c5e8ee",
+            navy: "#333236",
             white: "#FFFFFF",
-            grayLight: "#F7F7F7",
+            grayLight: "#74100e",
             dark: "#1A1A1A",
             overlay: "rgba(0,0,0,0.6)",
           },
@@ -67,46 +67,49 @@
     <div class="absolute inset-0 bg-black/70"></div>
 
     <!-- NAVBAR -->
-    <nav id="navbar"
-      class="absolute top-0 left-0 w-full px-6 md:px-[8rem] py-4 z-20 bg-transparent transition-all duration-300">
-      <div class="flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex flex-col">
-          <h1 class="text-2xl font-bold text-white">SAH <span class="text-gold">Ortho</span></h1>
-          <p class="text-sm text-gray-300">reducing complexity</p>
-        </div>
-
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white">
-          <li><a href="./index.html" class="hover:text-gold transition">Home</a></li>
-          <li><a href="./about.html" class="hover:text-gold transition">About</a></li>
-          <li><a href="./product.html" class="hover:text-gold transition">Product</a></li>
-          <li><a href="./blogs.html" class="hover:text-gold transition">Blogs</a></li>
-          <li><a href="./contact.html" class="hover:text-gold transition">Contact</a></li>
-        </ul>
-
-        <!-- Mobile Menu Button -->
-        <button id="menuBtn" class="md:hidden text-white focus:outline-none">
-          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+      <nav id="navbar"
+    class="absolute top-0 left-0 w-full px-6 md:px-[8rem] py-4 z-20 bg-transparent transition-all duration-300">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="./assets/orthologo1-removebg-preview.png" alt="SAH Ortho Logo"
+          class="h-12 w-auto transition-all duration-300" id="logo">
       </div>
 
-      <!-- Mobile Dropdown Menu -->
-      <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden">
-        <a href="./index.html" class="uppercase block hover:text-gold transition">Home</a>
-        <a href="./about.html" class="uppercase block hover:text-gold transition">About</a>
-        <a href="./product.html" class="uppercase block hover:text-gold transition">Product</a>
-        <a href="./blogs.html" class="uppercase block hover:text-gold transition">Blogs</a>
-        <a href="./contact.html" class="uppercase block hover:text-gold transition">Contact</a>
-      </div>
-    </nav>
+      <!-- Desktop Menu -->
+      <ul id="navLinks"
+        class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white transition-all duration-300">
+        <li><a href="./index.html" class="hover:text-gold transition">Home</a></li>
+        <li><a href="./about.html" class="hover:text-gold transition">About</a></li>
+        <li><a href="./product.html" class="hover:text-gold transition">Product</a></li>
+        <li><a href="./blogs.html" class="hover:text-gold transition">Blogs</a></li>
+        <li><a href="./contact.html" class="hover:text-gold transition">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-white focus:outline-none transition-all duration-300">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu"
+      class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden transition-all duration-300">
+      <a href="./index.html" class="uppercase block hover:text-gold transition">Home</a>
+      <a href="./about.html" class="uppercase block hover:text-gold transition">About</a>
+      <a href="./product.html" class="uppercase block hover:text-gold transition">Product</a>
+      <a href="./blogs.html" class="uppercase block hover:text-gold transition">Blogs</a>
+      <a href="./contact.html" class="uppercase block hover:text-gold transition">Contact</a>
+    </div>
+  </nav>
 
     <!-- HERO CONTENT (RIGHT-BOTTOM) -->
     <div class="relative z-10 flex justify-end items-end h-full px-6 md:px-[8rem] pb-12 md:pb-24">
-      <h2 class="text-gold text-right text-4xl md:text-6xl leading-tight font-light max-w-[700px]">
+      <h2 class="text-goldLight text-right text-4xl md:text-6xl leading-tight font-light max-w-[700px]">
         ABOUT SAH ORTHO<br>
         <span class="text-gold font-normal text-2xl md:text-4xl block mt-4">
           Trusted Innovation in Orthopaedic Implants
@@ -117,42 +120,54 @@
 
   <!-- JS for sticky navbar -->
   <script>
-    const navbar = document.getElementById('navbar');
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.getElementById('navLinks');
+  const menuBtn = document.getElementById('menuBtn');
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('fixed', 'bg-navy', 'shadow-lg');
-        navbar.classList.remove('absolute', 'bg-transparent');
-      } else {
-        navbar.classList.add('absolute', 'bg-transparent');
-        navbar.classList.remove('fixed', 'bg-navy', 'shadow-lg');
-      }
-    });
-  </script>
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('fixed', 'bg-white', 'shadow-lg');
+      navbar.classList.remove('absolute', 'bg-transparent');
 
+      navLinks.classList.remove('text-white');
+      navLinks.classList.add('text-navy');
 
-  <!-- SCRIPT FOR DROPDOWN -->
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
+      menuBtn.classList.remove('text-white');
+      menuBtn.classList.add('text-navy');
+    } else {
+      navbar.classList.add('absolute', 'bg-transparent');
+      navbar.classList.remove('fixed', 'bg-white', 'shadow-lg');
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      menuIcon.innerHTML = mobileMenu.classList.contains('hidden')
-        ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>'
-        : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
-    });
-  </script>
+      navLinks.classList.add('text-white');
+      navLinks.classList.remove('text-navy');
 
+      menuBtn.classList.add('text-white');
+      menuBtn.classList.remove('text-navy');
+    }
+  });
+</script>
 
-  <script>
-    const video = document.getElementById('bgVideo');
-    video.addEventListener('ended', () => {
-      video.pause();
-      video.currentTime = video.duration; // Hold on last frame
-    });
-  </script>
+<!-- SCRIPT FOR DROPDOWN -->
+<script>
+  const menuIcon = document.getElementById('menuIcon');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.innerHTML = mobileMenu.classList.contains('hidden')
+      ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>'
+      : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+  });
+</script>
+
+<!-- Background video freeze on last frame -->
+<script>
+  const video = document.getElementById('bgVideo');
+  video.addEventListener('ended', () => {
+    video.pause();
+    video.currentTime = video.duration; // Hold on last frame
+  });
+</script>
 
 
 
@@ -290,7 +305,7 @@
 
     <!-- Right: Factory Image -->
     <div class="w-full lg:w-1/2 lg:min-h-[600px]">
-      <img src="./assets/orthoimg.png" alt="SAH Ortho Factory" class="w-full h-full object-cover grayscale" />
+      <img src="./assets/aboutimg.jpeg" alt="SAH Ortho Factory" class="w-full h-full object-cover grayscale" />
     </div>
   </section>
 
@@ -300,117 +315,108 @@
 
 
   <!-- FOOTER -->
-  <footer class="bg-navy text-gold pt-16 pb-8 px-8 md:px-[8rem]">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+  <footer class="bg-black text-goldLight pt-16 pb-8 px-8 md:px-[8rem]">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
 
-      <!-- Column 1: Social + Button -->
-      <div class="flex flex-col items-center md:items-start space-y-8">
-        <div>
-          <span class="uppercase tracking-wide text-sm font-medium mb-3 block">Follow us</span>
-          <div class="flex justify-center md:justify-start space-x-2 mt-2">
+    <!-- Column 1: Social + Button -->
+    <div class="flex flex-col items-center md:items-start space-y-8">
+      <div>
+        <span class="uppercase tracking-wide text-sm font-medium mb-3 block">Follow us</span>
+        <div class="flex justify-center md:justify-start space-x-2 mt-2">
 
-            <!-- LinkedIn -->
-            <a href="#" aria-label="LinkedIn"
-              class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.04 0 3.602 2.001 3.602 4.601v5.595z" />
-              </svg>
-            </a>
-
-            <!-- YouTube -->
-            <!-- <a href="#" aria-label="YouTube"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+          <!-- LinkedIn -->
+          <a href="#" aria-label="LinkedIn"
+            class="bg-gold rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
               <path
-                d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117c-1.863-.504-9.391-.504-9.391-.504s-7.527 0-9.391.504a2.994 2.994 0 0 0-2.107 2.117c-.504 1.864-.504 5.754-.504 5.754s0 3.89.504 5.754a2.994 2.994 0 0 0 2.107 2.117c1.864.504 9.391.504 9.391.504s7.528 0 9.391-.504a2.994 2.994 0 0 0 2.107-2.117c.504-1.864.504-5.754.504-5.754s0-3.89-.504-5.754zm-13.498 9.814v-7l6 3.5-6 3.5z" />
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.04 0 3.602 2.001 3.602 4.601v5.595z" />
             </svg>
-          </a> -->
+          </a>
 
-            <!-- Facebook -->
-            <a href="#" aria-label="Facebook"
-              class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12" />
-              </svg>
-            </a>
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook"
+            class="bg-gold rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12" />
+            </svg>
+          </a>
 
-            <!-- Twitter -->
-            <a href="#" aria-label="Twitter"
-              class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M22.46 6c-.77.35-1.6.59-2.46.7a4.25 4.25 0 0 0 1.88-2.35 8.45 8.45 0 0 1-2.7 1.03 4.23 4.23 0 0 0-7.2 3.86 12 12 0 0 1-8.7-4.4 4.23 4.23 0 0 0 1.3 5.65 4.2 4.2 0 0 1-1.9-.5v.05a4.23 4.23 0 0 0 3.4 4.15 4.2 4.2 0 0 1-1.9.07 4.23 4.23 0 0 0 4 3 8.5 8.5 0 0 1-5.3 1.8A8.64 8.64 0 0 1 2 19.54a12 12 0 0 0 6.5 1.9c7.8 0 12.1-6.5 12.1-12.1v-.55c.83-.6 1.6-1.4 2.2-2.3z" />
-              </svg>
-            </a>
+          <!-- Twitter -->
+          <a href="#" aria-label="Twitter"
+            class="bg-gold rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22.46 6c-.77.35-1.6.59-2.46.7a4.25 4.25 0 0 0 1.88-2.35 8.45 8.45 0 0 1-2.7 1.03 4.23 4.23 0 0 0-7.2 3.86 12 12 0 0 1-8.7-4.4 4.23 4.23 0 0 0 1.3 5.65 4.2 4.2 0 0 1-1.9-.5v.05a4.23 4.23 0 0 0 3.4 4.15 4.2 4.2 0 0 1-1.9.07 4.23 4.23 0 0 0 4 3 8.5 8.5 0 0 1-5.3 1.8A8.64 8.64 0 0 1 2 19.54a12 12 0 0 0 6.5 1.9c7.8 0 12.1-6.5 12.1-12.1v-.55c.83-.6 1.6-1.4 2.2-2.3z" />
+            </svg>
+          </a>
 
-            <!-- Instagram -->
-            <a href="#" aria-label="Instagram"
-              class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.1-.3 2.3-.4 1.3-.1 1.7-.1 4.9-.1m0-2.2C8.7 0 8.3 0 7 0 5.7 0 4.7.1 4 0.3c-.8.2-1.5.5-2.1 1.1-.6.6-.9 1.3-1.1 2.1C.6 4.2.5 5.2.5 6.5.5 7.8.5 8.2.5 12s0 4.2.1 5.5c.1 1.3.2 2.3.4 3.1.2.8.5 1.5 1.1 2.1.6.6 1.3.9 2.1 1.1.8.2 1.8.3 3.1.4 1.3.1 1.7.1 5.5.1s4.2 0 5.5-.1c1.3-.1 2.3-.2 3.1-.4.8-.2 1.5-.5 2.1-1.1.6-.6.9-1.3 1.1-2.1.2-.8.3-1.8.4-3.1.1-1.3.1-1.7.1-5.5s0-4.2-.1-5.5c-.1-1.3-.2-2.3-.4-3.1-.2-.8-.5-1.5-1.1-2.1-.6-.6-1.3-.9-2.1-1.1-.8-.2-1.8-.3-3.1-.4C16.2.1 15.8 0 12 0z" />
-                <circle cx="12" cy="12" r="3.2" />
-              </svg>
-            </a>
-          </div>
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram"
+            class="bg-gold rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.1-.3 2.3-.4 1.3-.1 1.7-.1 4.9-.1m0-2.2C8.7 0 8.3 0 7 0 5.7 0 4.7.1 4 0.3c-.8.2-1.5.5-2.1 1.1-.6.6-.9 1.3-1.1 2.1C.6 4.2.5 5.2.5 6.5.5 7.8.5 8.2.5 12s0 4.2.1 5.5c.1 1.3.2 2.3.4 3.1.2.8.5 1.5 1.1 2.1.6.6 1.3.9 2.1 1.1.8.2 1.8.3 3.1.4 1.3.1 1.7.1 5.5.1s4.2 0 5.5-.1c1.3-.1 2.3-.2 3.1-.4.8-.2 1.5-.5 2.1-1.1.6-.6.9-1.3 1.1-2.1.2-.8.3-1.8.4-3.1.1-1.3.1-1.7.1-5.5s0-4.2-.1-5.5c-.1-1.3-.2-2.3-.4-3.1-.2-.8-.5-1.5-1.1-2.1-.6-.6-1.3-.9-2.1-1.1-.8-.2-1.8-.3-3.1-.4C16.2.1 15.8 0 12 0z" />
+              <circle cx="12" cy="12" r="3.2" />
+            </svg>
+          </a>
         </div>
-        <a href="./contact.html"
-          class="bg-gold hover:bg-goldLight text-navy px-6 py-2 rounded-none text-sm font-medium tracking-wide transition w-[160px] text-center block">
-          GET IN TOUCH
-        </a>
       </div>
-
-      <!-- Column 2: Main Menu -->
-      <div>
-        <span class="font-semibold text-base uppercase block mb-3">MENU</span>
-        <ul class="space-y-1  text-sm">
-          <li><a href="./index.html" class="hover:underline">Home</a></li>
-          <li><a href="./about.html" class="hover:underline">About</a></li>
-          <li><a href="./product.html" class="hover:underline">Product</a></li>
-          <li><a href="./blogs.html" class="hover:underline">Blog</a></li>
-          <li><a href="./contact.html" class="hover:underline">Contact</a></li>
-          <li><a href="./terms.html" class="hover:underline">Terms & Conditions</a></li>
-          <li><a href="./privacy.html" class="hover:underline">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Products -->
-      <div>
-        <span class="font-semibold text-base uppercase block mb-3">PRODUCTS</span>
-        <ul class="space-y-1 text-sm">
-          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-                class="mr-2">&rarr;</span> Femoral Locking Plates</a></li>
-          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-                class="mr-2">&rarr;</span> Proximal Femur LCP Plates</a></li>
-          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-                class="mr-2">&rarr;</span> Clavicle Hook Plates</a></li>
-          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-                class="mr-2">&rarr;</span> Cortical & Cancellous Screws</a></li>
-          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-                class="mr-2">&rarr;</span> PFN Nails & Locking Bolts</a></li>
-          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-                class="mr-2">&rarr;</span> Instrument Sets</a></li>
-          <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
-                class="mr-2">&rarr;</span> External Fixation Systems</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Contact Info -->
-      <div>
-        <span class="font-semibold text-base uppercase block mb-3">Contact</span>
-        <p class="text-sm text-center md:text-left">
-          House No. 27, Kh No. 136/2, Peepal Wala Mohalla, Near Bank of Baroda, Badli, North West Delhi,
-          Delhi, 110042<br>
-          Phone: +91 98765 43210<br>
-          Email: info@bonebridge.com<br>
-          Mon–Sat: 9:00am – 6:00pm
-        </p>
-      </div>
-
+      <a href="./contact.html"
+        class="bg-gold hover:bg-goldLight text-navy px-6 py-2 rounded-none text-sm font-medium tracking-wide transition w-[160px] text-center block">
+        GET IN TOUCH
+      </a>
     </div>
-  </footer>
+
+    <!-- Column 2: Main Menu -->
+    <div>
+      <span class="font-semibold text-base uppercase block mb-3">MENU</span>
+      <ul class="space-y-1 text-sm">
+        <li><a href="./index.html" class="hover:underline">Home</a></li>
+        <li><a href="./about.html" class="hover:underline">About</a></li>
+        <li><a href="./product.html" class="hover:underline">Product</a></li>
+        <li><a href="./blogs.html" class="hover:underline">Blog</a></li>
+        <li><a href="./contact.html" class="hover:underline">Contact</a></li>
+        <li><a href="./terms.html" class="hover:underline">Terms & Conditions</a></li>
+        <li><a href="./privacy.html" class="hover:underline">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Products -->
+    <div>
+      <span class="font-semibold text-base uppercase block mb-3">PRODUCTS</span>
+      <ul class="space-y-1 text-sm">
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+              class="mr-2">&rarr;</span> Femoral Locking Plates</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+              class="mr-2">&rarr;</span> Proximal Femur LCP Plates</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+              class="mr-2">&rarr;</span> Clavicle Hook Plates</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+              class="mr-2">&rarr;</span> Cortical & Cancellous Screws</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+              class="mr-2">&rarr;</span> PFN Nails & Locking Bolts</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+              class="mr-2">&rarr;</span> Instrument Sets</a></li>
+        <li><a href="#" class="flex items-center justify-center md:justify-start hover:underline"><span
+              class="mr-2">&rarr;</span> External Fixation Systems</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Contact Info -->
+    <div>
+      <span class="font-semibold text-base uppercase block mb-3">Contact</span>
+      <p class="text-sm text-center md:text-left">
+        House No. 27, Kh No. 136/2, Peepal Wala Mohalla, Near Bank of Baroda, Badli, North West Delhi,
+        Delhi, 110042<br>
+        Phone: +91 98765 43210<br>
+        Email: info@bonebridge.com<br>
+        Mon–Sat: 9:00am – 6:00pm
+      </p>
+    </div>
+
+  </div>
+</footer>
 
 
 

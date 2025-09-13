@@ -2,50 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAH Ortho</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAH Ortho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
 
 
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: "#B8981E",
-                        goldLight: "#E6D6A8",
-                        navy: "#0D2233",
-                        white: "#FFFFFF",
-                        grayLight: "#F7F7F7",
-                        dark: "#1A1A1A",
-                        overlay: "rgba(0,0,0,0.6)",
-                    },
-                    spacing: {
-                        sectionX: "8rem",
-                    },
-                    fontFamily: {
-                        sans: ["Helvetica", "Arial", "sans-serif"],
-                    }
-                }
-            }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: "#be8455",
+            goldLight: "#c5e8ee",
+            navy: "#333236",
+            white: "#FFFFFF",
+            grayLight: "#74100e",
+            dark: "#1A1A1A",
+            overlay: "rgba(0,0,0,0.6)",
+          },
+          spacing: {
+            sectionX: "8rem",
+          },
+          fontFamily: {
+            sans: ["Helvetica", "Arial", "sans-serif"],
+          }
         }
-    </script>
-    <style>
-        @layer base {
-            body {
-                font-family: Helvetica, Arial, sans-serif;
-            }
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    @layer base {
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+    }
+  </style>
 
 
-    <!-- Font Awesome CDN (Latest Version with FAB Icons Support) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-yHGo6QxU5+K2KznI0EkmFY12H2uK4rJ2V2Oe6mQqD5Nw4AjX9sG1awQHjXWbPV3VSh+oO7Y4ZCZT95E4CRd4rw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome CDN (Latest Version with FAB Icons Support) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-yHGo6QxU5+K2KznI0EkmFY12H2uK4rJ2V2Oe6mQqD5Nw4AjX9sG1awQHjXWbPV3VSh+oO7Y4ZCZT95E4CRd4rw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
@@ -54,202 +54,229 @@
 
 <body class="bg-black text-white">
 
-    <!-- HERO SECTION -->
- <!-- HERO SECTION -->
-<header class="relative w-full h-[40vh] bg-navy flex items-center justify-center overflow-hidden">
+  <!-- HERO SECTION -->
+  <!-- HERO SECTION -->
+  <header class="relative w-full h-[40vh] bg-navy flex items-center justify-center overflow-hidden">
 
-  <!-- Background Image -->
-  <img src="./assets/term.jpeg" alt="Terms & Conditions Banner" 
-       class="absolute inset-0 w-full h-full object-cover opacity-60">
+    <!-- Background Image -->
+    <img src="./assets/term.jpeg" alt="Terms & Conditions Banner"
+      class="absolute inset-0 w-full h-full object-cover opacity-60">
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/60"></div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
 
-  <!-- NAVBAR -->
-  <nav id="navbar"
+    <!-- NAVBAR -->
+    <nav id="navbar"
       class="absolute top-0 left-0 w-full px-6 md:px-[8rem] py-4 z-20 bg-transparent transition-all duration-300">
       <div class="flex justify-between items-center">
-          <!-- Logo -->
-          <div class="flex flex-col">
-              <h1 class="text-2xl font-bold text-white">SAH <span class="text-gold">Ortho</span></h1>
-              <p class="text-sm text-gray-300">reducing complexity</p>
-          </div>
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img src="./assets/orthologo1-removebg-preview.png" alt="SAH Ortho Logo"
+            class="h-12 w-auto transition-all duration-300" id="logo">
+        </div>
 
-          <!-- Desktop Menu -->
-          <ul class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white">
-              <li><a href="./index.html" class="hover:text-gold transition">Home</a></li>
-              <li><a href="./about.html" class="hover:text-gold transition">About</a></li>
-              <li><a href="./product.html" class="hover:text-gold transition">Product</a></li>
-              <li><a href="./blogs.html" class="hover:text-gold transition">Blogs</a></li>
-              <li><a href="./contact.html" class="hover:text-gold transition">Contact</a></li>
-          </ul>
+        <!-- Desktop Menu -->
+        <ul id="navLinks"
+          class="hidden md:flex space-x-6 lg:space-x-14 text-sm uppercase text-white transition-all duration-300">
+          <li><a href="./index.html" class="hover:text-gold transition">Home</a></li>
+          <li><a href="./about.html" class="hover:text-gold transition">About</a></li>
+          <li><a href="./product.html" class="hover:text-gold transition">Product</a></li>
+          <li><a href="./blogs.html" class="hover:text-gold transition">Blogs</a></li>
+          <li><a href="./contact.html" class="hover:text-gold transition">Contact</a></li>
+        </ul>
 
-          <!-- Mobile Menu Button -->
-          <button id="menuBtn" class="md:hidden text-white focus:outline-none">
-              <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none"
-                  viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-          </button>
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-white focus:outline-none transition-all duration-300">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
 
       <!-- Mobile Dropdown Menu -->
-      <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden">
-          <a href="./index.html" class="uppercase block hover:text-gold transition">Home</a>
-          <a href="./about.html" class="uppercase block hover:text-gold transition">About</a>
-          <a href="./product.html" class="uppercase block hover:text-gold transition">Product</a>
-          <a href="./blogs.html" class="uppercase block hover:text-gold transition">Blogs</a>
-          <a href="./contact.html" class="uppercase block hover:text-gold transition">Contact</a>
+      <div id="mobileMenu"
+        class="hidden flex-col mt-4 space-y-4 bg-navy text-white p-6 rounded-lg md:hidden transition-all duration-300">
+        <a href="./index.html" class="uppercase block hover:text-gold transition">Home</a>
+        <a href="./about.html" class="uppercase block hover:text-gold transition">About</a>
+        <a href="./product.html" class="uppercase block hover:text-gold transition">Product</a>
+        <a href="./blogs.html" class="uppercase block hover:text-gold transition">Blogs</a>
+        <a href="./contact.html" class="uppercase block hover:text-gold transition">Contact</a>
       </div>
-  </nav>
+    </nav>
 
-  <!-- HERO CONTENT -->
-  <div class="relative z-10 text-center px-6 md:px-[8rem] pt-28 md:pt-36">
+    <!-- HERO CONTENT -->
+    <div class="relative z-10 text-center px-6 md:px-[8rem] pt-28 md:pt-36">
       <h2 class="text-gold text-3xl md:text-5xl font-semibold tracking-wide">
-          Terms & Conditions
+        Terms & Conditions
       </h2>
       <p class="text-gray-200 mt-3 text-lg">Clear, Transparent & Professional</p>
-  </div>
-</header>
+    </div>
+  </header>
 
 
-    <!-- JS for sticky navbar -->
-    <script>
-        const navbar = document.getElementById('navbar');
+  <!-- JS for sticky navbar -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.getElementById('navLinks');
+    const menuBtn = document.getElementById('menuBtn');
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('fixed', 'bg-navy', 'shadow-lg');
-                navbar.classList.remove('absolute', 'bg-transparent');
-            } else {
-                navbar.classList.add('absolute', 'bg-transparent');
-                navbar.classList.remove('fixed', 'bg-navy', 'shadow-lg');
-            }
-        });
-    </script>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('fixed', 'bg-white', 'shadow-lg');
+        navbar.classList.remove('absolute', 'bg-transparent');
+
+        navLinks.classList.remove('text-white');
+        navLinks.classList.add('text-navy');
+
+        menuBtn.classList.remove('text-white');
+        menuBtn.classList.add('text-navy');
+      } else {
+        navbar.classList.add('absolute', 'bg-transparent');
+        navbar.classList.remove('fixed', 'bg-white', 'shadow-lg');
+
+        navLinks.classList.add('text-white');
+        navLinks.classList.remove('text-navy');
+
+        menuBtn.classList.add('text-white');
+        menuBtn.classList.remove('text-navy');
+      }
+    });
+  </script>
+
+  <!-- SCRIPT FOR DROPDOWN -->
+  <script>
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.innerHTML = mobileMenu.classList.contains('hidden')
+        ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>'
+        : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+    });
+  </script>
+
+  <!-- Background video freeze on last frame -->
+  <script>
+    const video = document.getElementById('bgVideo');
+    video.addEventListener('ended', () => {
+      video.pause();
+      video.currentTime = video.duration; // Hold on last frame
+    });
+  </script>
 
 
-    <!-- SCRIPT FOR DROPDOWN -->
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const menuIcon = document.getElementById('menuIcon');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuIcon.innerHTML = mobileMenu.classList.contains('hidden')
-                ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>'
-                : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
-        });
-    </script>
-
-
-    <script>
-        const video = document.getElementById('bgVideo');
-        video.addEventListener('ended', () => {
-            video.pause();
-            video.currentTime = video.duration; // Hold on last frame
-        });
-    </script>
 
 
 
 
+  <!-- CONTENT -->
+  <main class="px-6 md:px-[8rem] py-14 bg-gray-50">
+    <div class="max-w-6xl mx-auto space-y-16">
 
+      <!-- Intro -->
+      <section>
+        <h3 class="text-3xl font-bold text-gold uppercase mb-4">1. Introduction</h3>
+        <p class="bg-white p-6 text-gray-700 leading-relaxed">
+          These Terms &amp; Conditions (“Terms”) govern your use of <strong class="text-navy">SAH Ortho</strong>’s
+          website and products.
+          By accessing our site or purchasing products, you agree to these Terms.
+        </p>
+      </section>
 
-<!-- CONTENT -->
-<main class="px-6 md:px-[8rem] py-14 bg-gray-50">
-  <div class="max-w-6xl mx-auto space-y-16">
+      <!-- IP -->
+      <section>
+        <h3 class="text-3xl font-bold text-gold uppercase mb-4">2. Intellectual Property</h3>
+        <p class="bg-white p-6 text-gray-700">
+          All content on this website (text, images, product designs, logos, trademarks) is the exclusive property of
+          <strong class="text-navy">SAH Ortho</strong> and cannot be copied, modified, or reproduced without prior
+          written consent.
+        </p>
+      </section>
 
-    <!-- Intro -->
-    <section>
-      <h3 class="text-3xl font-bold text-gold uppercase mb-4">1. Introduction</h3>
-      <p class="bg-white p-6 text-gray-700 leading-relaxed">
-        These Terms &amp; Conditions (“Terms”) govern your use of <strong class="text-navy">SAH Ortho</strong>’s website and products. 
-        By accessing our site or purchasing products, you agree to these Terms.
-      </p>
-    </section>
+      <!-- Product Info -->
+      <section>
+        <h3 class="text-3xl font-bold text-gold uppercase mb-4">3. Product Information</h3>
+        <ul class="space-y-4">
+          <li class="bg-white p-6 text-gray-700">We make every effort to provide accurate product descriptions,
+            specifications, and images.</li>
+          <li class="bg-white p-6 text-gray-700">
+            <strong class="text-navy">Medical Disclaimer:</strong> Our orthopedic implants and instruments are strictly
+            for professional medical use by licensed healthcare practitioners.
+          </li>
+          <li class="bg-white p-6 text-gray-700">The company is not liable for misuse or unauthorized handling of
+            products.</li>
+        </ul>
+      </section>
 
-    <!-- IP -->
-    <section>
-      <h3 class="text-3xl font-bold text-gold uppercase mb-4">2. Intellectual Property</h3>
-      <p class="bg-white p-6 text-gray-700">
-        All content on this website (text, images, product designs, logos, trademarks) is the exclusive property of 
-        <strong class="text-navy">SAH Ortho</strong> and cannot be copied, modified, or reproduced without prior written consent.
-      </p>
-    </section>
+      <!-- Orders & Payments -->
+      <section>
+        <h3 class="text-3xl font-bold text-gold uppercase mb-4">4. Orders &amp; Payments</h3>
+        <ul class="grid md:grid-cols-2 gap-6">
+          <li class="bg-white p-6 text-gray-700">Prices are subject to change without notice.</li>
+          <li class="bg-white p-6 text-gray-700">Orders are confirmed only after receipt of payment or an official
+            purchase order.</li>
+          <li class="bg-white p-6 text-gray-700">We reserve the right to refuse or cancel any order at our discretion.
+          </li>
+        </ul>
+      </section>
 
-    <!-- Product Info -->
-    <section>
-      <h3 class="text-3xl font-bold text-gold uppercase mb-4">3. Product Information</h3>
-      <ul class="space-y-4">
-        <li class="bg-white p-6 text-gray-700">We make every effort to provide accurate product descriptions, specifications, and images.</li>
-        <li class="bg-white p-6 text-gray-700">
-          <strong class="text-navy">Medical Disclaimer:</strong> Our orthopedic implants and instruments are strictly for professional medical use by licensed healthcare practitioners.
-        </li>
-        <li class="bg-white p-6 text-gray-700">The company is not liable for misuse or unauthorized handling of products.</li>
-      </ul>
-    </section>
+      <!-- Shipping & Delivery -->
+      <section>
+        <h3 class="text-3xl font-bold text-gold uppercase mb-4">5. Shipping &amp; Delivery</h3>
+        <p class="bg-white p-6 text-gray-700">
+          Delivery timelines are approximate and subject to third-party logistics. We are not responsible for delays
+          caused by customs, couriers, or unforeseen circumstances.
+        </p>
+      </section>
 
-    <!-- Orders & Payments -->
-    <section>
-      <h3 class="text-3xl font-bold text-gold uppercase mb-4">4. Orders &amp; Payments</h3>
-      <ul class="grid md:grid-cols-2 gap-6">
-        <li class="bg-white p-6 text-gray-700">Prices are subject to change without notice.</li>
-        <li class="bg-white p-6 text-gray-700">Orders are confirmed only after receipt of payment or an official purchase order.</li>
-        <li class="bg-white p-6 text-gray-700">We reserve the right to refuse or cancel any order at our discretion.</li>
-      </ul>
-    </section>
+      <!-- Warranty & Liability -->
+      <section>
+        <h3 class="text-3xl font-bold text-gold uppercase mb-4">6. Warranty &amp; Liability</h3>
+        <ul class="space-y-4">
+          <li class="bg-white p-6 text-gray-700">Products are covered under <strong class="text-navy">manufacturing
+              defect warranty</strong> only.</li>
+          <li class="bg-white p-6 text-gray-700">SAH Ortho is not liable for indirect damages, injuries, or losses
+            caused by product misuse.</li>
+        </ul>
+      </section>
 
-    <!-- Shipping & Delivery -->
-    <section>
-      <h3 class="text-3xl font-bold text-gold uppercase mb-4">5. Shipping &amp; Delivery</h3>
-      <p class="bg-white p-6 text-gray-700">
-        Delivery timelines are approximate and subject to third-party logistics. We are not responsible for delays caused by customs, couriers, or unforeseen circumstances.
-      </p>
-    </section>
+      <!-- Limitation -->
+      <section>
+        <h3 class="text-3xl font-bold text-gold uppercase mb-4">7. Limitation of Liability</h3>
+        <p class="bg-white p-6 text-gray-700">
+          To the maximum extent permitted by law, <strong class="text-navy">SAH Ortho</strong>’s liability is limited to
+          the value of the product purchased.
+        </p>
+      </section>
 
-    <!-- Warranty & Liability -->
-    <section>
-      <h3 class="text-3xl font-bold text-gold uppercase mb-4">6. Warranty &amp; Liability</h3>
-      <ul class="space-y-4">
-        <li class="bg-white p-6 text-gray-700">Products are covered under <strong class="text-navy">manufacturing defect warranty</strong> only.</li>
-        <li class="bg-white p-6 text-gray-700">SAH Ortho is not liable for indirect damages, injuries, or losses caused by product misuse.</li>
-      </ul>
-    </section>
+      <!-- Governing Law -->
+      <section>
+        <h3 class="text-3xl font-bold text-gold uppercase mb-4">8. Governing Law</h3>
+        <p class="bg-white p-6 text-gray-700">
+          These Terms are governed by the laws of <strong class="text-navy">India</strong>.
+          Any disputes will be subject to the jurisdiction of courts in <strong class="text-navy">New Delhi</strong>
+          (update if needed).
+        </p>
+      </section>
 
-    <!-- Limitation -->
-    <section>
-      <h3 class="text-3xl font-bold text-gold uppercase mb-4">7. Limitation of Liability</h3>
-      <p class="bg-white p-6 text-gray-700">
-        To the maximum extent permitted by law, <strong class="text-navy">SAH Ortho</strong>’s liability is limited to the value of the product purchased.
-      </p>
-    </section>
+      <!-- Contact -->
+      <section>
+        <h3 class="text-3xl font-bold text-gold uppercase mb-4">9. Contact Us</h3>
+        <div class="bg-white p-6">
+          <p class="font-semibold text-navy mb-2">SAH Ortho</p>
+          <p class="text-gray-700">House No. 27, Kh No. 136/2, Peepal Wala Mohalla, Near Bank of Baroda, Badli, North
+            West Delhi, Delhi, 110042</p>
+          <p class="mt-3 text-gray-700">Phone: <span class="font-semibold text-navy">+91 98765 43210</span></p>
+          <p>Email: <a href="mailto:info@bonebridge.com"
+              class="text-gold underline hover:text-navy">info@bonebridge.com</a></p>
+          <p class="mt-1 text-gray-600">Mon–Sat: 9:00am – 6:00pm</p>
+        </div>
+      </section>
 
-    <!-- Governing Law -->
-    <section>
-      <h3 class="text-3xl font-bold text-gold uppercase mb-4">8. Governing Law</h3>
-      <p class="bg-white p-6 text-gray-700">
-        These Terms are governed by the laws of <strong class="text-navy">India</strong>. 
-        Any disputes will be subject to the jurisdiction of courts in <strong class="text-navy">New Delhi</strong> (update if needed).
-      </p>
-    </section>
-
-    <!-- Contact -->
-    <section>
-      <h3 class="text-3xl font-bold text-gold uppercase mb-4">9. Contact Us</h3>
-      <div class="bg-white p-6">
-        <p class="font-semibold text-navy mb-2">SAH Ortho</p>
-        <p class="text-gray-700">House No. 27, Kh No. 136/2, Peepal Wala Mohalla, Near Bank of Baroda, Badli, North West Delhi, Delhi, 110042</p>
-        <p class="mt-3 text-gray-700">Phone: <span class="font-semibold text-navy">+91 98765 43210</span></p>
-        <p>Email: <a href="mailto:info@bonebridge.com" class="text-gold underline hover:text-navy">info@bonebridge.com</a></p>
-        <p class="mt-1 text-gray-600">Mon–Sat: 9:00am – 6:00pm</p>
-      </div>
-    </section>
-
-  </div>
-</main>
+    </div>
+  </main>
 
 
 
@@ -257,7 +284,7 @@
 
 
   <!-- FOOTER -->
-<footer class="bg-navy text-gold pt-16 pb-8 px-8 md:px-[8rem]">
+  <footer class="bg-black text-goldLight pt-16 pb-8 px-8 md:px-[8rem]">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
 
     <!-- Column 1: Social + Button -->
@@ -268,25 +295,16 @@
 
           <!-- LinkedIn -->
           <a href="#" aria-label="LinkedIn"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+            class="bg-gold rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.04 0 3.602 2.001 3.602 4.601v5.595z" />
             </svg>
           </a>
 
-          <!-- YouTube -->
-          <!-- <a href="#" aria-label="YouTube"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117c-1.863-.504-9.391-.504-9.391-.504s-7.527 0-9.391.504a2.994 2.994 0 0 0-2.107 2.117c-.504 1.864-.504 5.754-.504 5.754s0 3.89.504 5.754a2.994 2.994 0 0 0 2.107 2.117c1.864.504 9.391.504 9.391.504s7.528 0 9.391-.504a2.994 2.994 0 0 0 2.107-2.117c.504-1.864.504-5.754.504-5.754s0-3.89-.504-5.754zm-13.498 9.814v-7l6 3.5-6 3.5z" />
-            </svg>
-          </a> -->
-
           <!-- Facebook -->
           <a href="#" aria-label="Facebook"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+            class="bg-gold rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12" />
@@ -295,7 +313,7 @@
 
           <!-- Twitter -->
           <a href="#" aria-label="Twitter"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+            class="bg-gold rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M22.46 6c-.77.35-1.6.59-2.46.7a4.25 4.25 0 0 0 1.88-2.35 8.45 8.45 0 0 1-2.7 1.03 4.23 4.23 0 0 0-7.2 3.86 12 12 0 0 1-8.7-4.4 4.23 4.23 0 0 0 1.3 5.65 4.2 4.2 0 0 1-1.9-.5v.05a4.23 4.23 0 0 0 3.4 4.15 4.2 4.2 0 0 1-1.9.07 4.23 4.23 0 0 0 4 3 8.5 8.5 0 0 1-5.3 1.8A8.64 8.64 0 0 1 2 19.54a12 12 0 0 0 6.5 1.9c7.8 0 12.1-6.5 12.1-12.1v-.55c.83-.6 1.6-1.4 2.2-2.3z" />
@@ -304,7 +322,7 @@
 
           <!-- Instagram -->
           <a href="#" aria-label="Instagram"
-            class="bg-goldLight rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
+            class="bg-gold rounded p-1.5 inline-flex items-center justify-center hover:opacity-90 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.1-.3 2.3-.4 1.3-.1 1.7-.1 4.9-.1m0-2.2C8.7 0 8.3 0 7 0 5.7 0 4.7.1 4 0.3c-.8.2-1.5.5-2.1 1.1-.6.6-.9 1.3-1.1 2.1C.6 4.2.5 5.2.5 6.5.5 7.8.5 8.2.5 12s0 4.2.1 5.5c.1 1.3.2 2.3.4 3.1.2.8.5 1.5 1.1 2.1.6.6 1.3.9 2.1 1.1.8.2 1.8.3 3.1.4 1.3.1 1.7.1 5.5.1s4.2 0 5.5-.1c1.3-.1 2.3-.2 3.1-.4.8-.2 1.5-.5 2.1-1.1.6-.6.9-1.3 1.1-2.1.2-.8.3-1.8.4-3.1.1-1.3.1-1.7.1-5.5s0-4.2-.1-5.5c-.1-1.3-.2-2.3-.4-3.1-.2-.8-.5-1.5-1.1-2.1-.6-.6-1.3-.9-2.1-1.1-.8-.2-1.8-.3-3.1-.4C16.2.1 15.8 0 12 0z" />
@@ -322,7 +340,7 @@
     <!-- Column 2: Main Menu -->
     <div>
       <span class="font-semibold text-base uppercase block mb-3">MENU</span>
-      <ul class="space-y-1  text-sm">
+      <ul class="space-y-1 text-sm">
         <li><a href="./index.html" class="hover:underline">Home</a></li>
         <li><a href="./about.html" class="hover:underline">About</a></li>
         <li><a href="./product.html" class="hover:underline">Product</a></li>
