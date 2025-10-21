@@ -190,7 +190,7 @@
 
         <!-- Card 1 -->
         <div class="border border-gray-200 hover:border-gold transition duration-300 flex flex-col">
-          <img src="./assets/instru1.jpg" alt="Upper Extremity Implants" class="w-full h-60 object-cover">
+          <img src="./assets/upper.png" alt="Upper Extremity Implants" class="w-full h-60 object-cover">
           <div class="p-6 flex-1 flex flex-col">
             <h3 class="text-navy text-2xl font-semibold mb-3">UPPER EXTREMITY</h3>
             <p class="text-gray-600 text-base flex-grow">
@@ -201,7 +201,7 @@
 
         <!-- Card 2 -->
         <div class="border border-gray-200 hover:border-gold transition duration-300 flex flex-col">
-          <img src="./assets/instru2.jpg" alt="Lower Extremity Implants" class="w-full h-60 object-cover">
+          <img src="./assets/lower.png" alt="Lower Extremity Implants" class="w-full h-60 object-cover">
           <div class="p-6 flex-1 flex flex-col">
             <h3 class="text-navy text-2xl font-semibold mb-3">LOWER EXTREMITY</h3>
             <p class="text-gray-600 text-base flex-grow">
@@ -213,7 +213,7 @@
 
         <!-- Card 3 -->
         <div class="border border-gray-200 hover:border-gold transition duration-300 flex flex-col">
-          <img src="./assets/instru3.jpg" alt="Spinal & Speciality Implants" class="w-full h-60 object-cover">
+          <img src="./assets/spinal.png" alt="Spinal & Speciality Implants" class="w-full h-60 object-cover">
           <div class="p-6 flex-1 flex flex-col">
             <h3 class="text-navy text-2xl font-semibold mb-3">SPINAL & SPECIALITY</h3>
             <p class="text-gray-600 text-base flex-grow">
@@ -253,7 +253,7 @@
       <div class="flex-1 flex flex-col items-center">
         <div
           class="w-full max-w-sm h-[300px] sm:h-[400px] flex items-center justify-center bg-gray-50 border border-gray-200 mx-auto">
-          <img src="./assets/instru4.jpg" alt="SAH Ortho Technology"
+          <img src="./assets/tech1.png" alt="SAH Ortho Technology"
             class="w-full h-full object-contain transition-all duration-300" id="tech-img">
         </div>
         <div class="flex space-x-2 mt-4">
@@ -267,9 +267,9 @@
 
   <script>
     const techImages = [
-      "./assets/instru4.jpg",
-      "./assets/instru5.jpg",
-      "./assets/instru6.jpg"
+      "./assets/tech1.png",
+      "./assets/tech2.png",
+      "./assets/tech3.png"
     ];
     const techImg = document.getElementById('tech-img');
     const dots = [0, 1, 2].map(i => document.getElementById('dot-' + i));
@@ -300,7 +300,7 @@
       <div>
         <h3 class="text-navy text-xl md:text-2xl font-semibold mb-4">VARIABLE ANGLE LOCKING</h3>
         <div class="w-full h-[160px] sm:h-[180px] flex items-center justify-center mb-6">
-          <img src="./assets/instru2.jpg" alt="Variable Angle Locking" class="h-full object-contain" />
+          <img src="./assets/anglelocking.png" alt="Variable Angle Locking" class="h-full object-contain" />
         </div>
         <p class="text-base md:text-lg text-navy leading-relaxed">
           Our plates feature advanced Variable Angle (VA) locking technology, enabling precise screw
@@ -313,7 +313,7 @@
       <div>
         <h3 class="text-navy text-xl md:text-2xl font-semibold mb-4">HYBRID FIXATION OPTIONS</h3>
         <div class="w-full h-[160px] sm:h-[180px] flex items-center justify-center mb-6">
-          <img src="./assets/instru4.jpg" alt="Hybrid Fixation" class="h-full object-contain" />
+          <img src="./assets/hybrid.png" alt="Hybrid Fixation" class="h-full object-contain" />
         </div>
         <p class="text-base md:text-lg text-navy leading-relaxed">
           Each hole accommodates both locking and non-locking screws, allowing surgeons to tailor
@@ -325,7 +325,7 @@
       <div>
         <h3 class="text-navy text-xl md:text-2xl font-semibold mb-4">SECURE DRILLING INTERFACE</h3>
         <div class="w-full h-[160px] sm:h-[180px] flex items-center justify-center mb-6">
-          <img src="./assets/instru5.jpg" alt="Secure Drilling Interface" class="h-full object-contain" />
+          <img src="./assets/drill.png" alt="Secure Drilling Interface" class="h-full object-contain" />
         </div>
         <p class="text-base md:text-lg text-navy leading-relaxed">
           Precision-engineered drill guides provide a firm “click-fit” engagement with the plate,
@@ -343,24 +343,23 @@
 
 
 
-  <section class="bg-white px-4 md:px-[8rem] py-16 border-b-2 border-navy">
+  <!-- <section class="bg-white px-4 md:px-[8rem] py-16 border-b-2 border-navy">
     <div class="max-w-7xl mx-auto">
-      <!-- Heading -->
+     
       <h2 class="text-gold text-4xl md:text-6xl font-light mb-6">SAH ORTHO PRODUCTS</h2>
       <div class="border-t-2 border-navy mb-10"></div>
 
-      <!-- Slider Wrapper -->
+     
       <div class="flex items-center justify-between relative">
-        <!-- Left Arrow -->
+        
         <button id="prevBtn" class="bg-navy text-white w-10 h-10 flex items-center justify-center flex-shrink-0">
           &#10094;
         </button>
 
-        <!-- Slider Content -->
         <div id="productSlider" class="overflow-hidden flex-1 mx-6">
           <div id="sliderTrack" class="flex gap-6 transition-transform duration-500">
 
-            <!-- Card 1 -->
+         
             <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
               <img src="./assets/instru1.jpg" alt="Femoral Distal Locking Plate"
                 class="w-full h-[200px] object-cover mb-4">
@@ -371,7 +370,6 @@
                 PRODUCT</a>
             </div>
 
-            <!-- Card 2 -->
             <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
               <img src="./assets/instru2.jpg" alt="LC-DHS Locking Plates" class="w-full h-[200px] object-cover mb-4">
               <h3 class="text-navy text-2xl font-semibold">130° & 135° LC-DHS Plates</h3>
@@ -381,7 +379,7 @@
                 PRODUCT</a>
             </div>
 
-            <!-- Card 3 -->
+         
             <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
               <img src="./assets/instru3.jpg" alt="Locking Plates" class="w-full h-[200px] object-cover mb-4">
               <h3 class="text-navy text-2xl font-semibold">Locking Plates</h3>
@@ -391,7 +389,7 @@
                 PRODUCT</a>
             </div>
 
-            <!-- Card 4 -->
+           
             <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
               <img src="./assets/instru4.jpg" alt="Bone Screws" class="w-full h-[200px] object-cover mb-4">
               <h3 class="text-navy text-2xl font-semibold">Bone Screws</h3>
@@ -401,7 +399,7 @@
                 PRODUCT</a>
             </div>
 
-            <!-- Card 5 -->
+           
             <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
               <img src="./assets/instru5.jpg" alt="Wires and Pins" class="w-full h-[200px] object-cover mb-4">
               <h3 class="text-navy text-2xl font-semibold">Nails, Wires & Pins</h3>
@@ -411,7 +409,7 @@
                 PRODUCT</a>
             </div>
 
-            <!-- Card 6 -->
+          
             <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
               <img src="./assets/instru6.jpg" alt="Instrument Sets" class="w-full h-[200px] object-cover mb-4">
               <h3 class="text-navy text-2xl font-semibold">Instrument Sets</h3>
@@ -421,7 +419,6 @@
                 PRODUCT</a>
             </div>
 
-            <!-- Card 7 -->
             <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
               <img src="./assets/instru1.jpg" alt="General Instruments" class="w-full h-[200px] object-cover mb-4">
               <h3 class="text-navy text-2xl font-semibold">General Instruments</h3>
@@ -434,7 +431,7 @@
           </div>
         </div>
 
-        <!-- Right Arrow -->
+       
         <button id="nextBtn" class="bg-navy text-white w-10 h-10 flex items-center justify-center flex-shrink-0">
           &#10095;
         </button>
@@ -480,7 +477,98 @@
     window.addEventListener("resize", updateSlider);
     updateSlider();
   </script>
+ -->
 
+
+
+
+ <section class="bg-white px-4 md:px-[8rem] py-16 border-b-2 border-navy">
+  <div class="max-w-7xl mx-auto">
+    <!-- Heading -->
+    <h2 class="text-gold text-4xl md:text-6xl font-light mb-6">SAH ORTHO PRODUCTS</h2>
+    <div class="border-t-2 border-navy mb-10"></div>
+
+    <!-- Slider Wrapper -->
+    <div class="flex items-center justify-between relative">
+      <!-- Left Arrow -->
+      <button id="prevBtn" class="bg-navy text-white w-10 h-10 flex items-center justify-center flex-shrink-0">
+        &#10094;
+      </button>
+
+      <!-- Slider Content -->
+      <div id="productSlider" class="overflow-hidden flex-1 mx-6">
+        <div id="sliderTrack" class="flex gap-6 transition-transform duration-500">
+
+          <!-- Plate Card -->
+          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+            <img src="./assets/plates/1.png" alt="Plates" class="w-full h-[200px] object-contain mb-4">
+            <h3 class="text-navy text-2xl font-semibold">PLATES</h3>
+            <p class="text-navy text-lg mb-2">SS & TIT plates for trauma care</p>
+            <p class="text-navy text-base flex-grow">Precision engineered for stability and versatility</p>
+            <a href="./productsList/plates.html" class="text-gold font-semibold mt-auto">→ FULL PLATES PORTFOLIO</a>
+          </div>
+
+          <!-- Screws Card -->
+          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+            <img src="./assets/screws/10.png" alt="Screws" class="w-full h-[200px] object-contain mb-4">
+            <h3 class="text-navy text-2xl font-semibold">SCREWS & BOLTS</h3>
+            <p class="text-navy text-lg mb-2">High-strength screws and locking bolts</p>
+            <p class="text-navy text-base flex-grow">Stable fixation across multiple indications</p>
+            <a href="./productsList/screw&bolt.html" class="text-gold font-semibold mt-auto">→ COMPLETE SCREWS RANGE</a>
+          </div>
+
+          <!-- Instruments Card -->
+          <div class="flex-shrink-0 flex flex-col min-h-[420px] border border-gray-200 p-2">
+            <img src="./assets/instruments/36.png" alt="Instruments" class="w-full h-[200px] object-contain mb-4">
+            <h3 class="text-navy text-2xl font-semibold">INSTRUMENTS & SETS</h3>
+            <p class="text-navy text-lg mb-2">Optimized surgical tools</p>
+            <p class="text-navy text-base flex-grow">Designed for efficiency and ease of use</p>
+            <a href="./productsList/instrumentSet.html" class="text-gold font-semibold mt-auto">→ ALL INSTRUMENT SETS</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button id="nextBtn" class="bg-navy text-white w-10 h-10 flex items-center justify-center flex-shrink-0">
+        &#10095;
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slider = document.getElementById("sliderTrack");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const sliderWrapper = document.getElementById("productSlider");
+
+  let index = 0;
+
+  function updateSlider() {
+    const cards = slider.children;
+    const containerWidth = sliderWrapper.offsetWidth;
+    const gap = 24;
+
+    let visibleCards = 3;
+    if (window.innerWidth < 768) visibleCards = 1;
+    else if (window.innerWidth < 1024) visibleCards = 2;
+
+    const totalGap = gap * (visibleCards - 1);
+    const cardWidth = (containerWidth - totalGap) / visibleCards;
+
+    Array.from(cards).forEach(card => card.style.width = cardWidth + "px");
+    slider.style.transform = `translateX(${-index * (cardWidth + gap)}px)`;
+
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index >= cards.length - visibleCards;
+  }
+
+  nextBtn.addEventListener("click", () => { index++; updateSlider(); });
+  prevBtn.addEventListener("click", () => { index--; updateSlider(); });
+  window.addEventListener("resize", updateSlider);
+  updateSlider();
+</script>
 
 
 
