@@ -34,12 +34,137 @@
     }
   </script>
   <style>
+
     @layer base {
       body {
         font-family: Helvetica, Arial, sans-serif;
       }
     }
+
+    /* Tablet: 768px - 1024px */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      /* Slightly reduce hero height so heading fits better */
+      header.relative.h-screen,
+      header[role="banner"],
+      header {
+        height: 75vh !important;
+      }
+
+      /* Tighten horizontal paddings used on desktop */
+      .px-8.md\:px-\[8rem\] {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+      }
+
+      /* Make hero heading a bit smaller and allow wrapping */
+      header .text-4xl.md\:text-6xl {
+        font-size: 2.6rem !important;
+        line-height: 1.04 !important;
+        max-width: 560px !important;
+      }
+
+      /* Navbar spacing */
+      #navbar {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+
+      /* Video / iframe: keep aspect and fill container */
+      .aspect-video, iframe, video {
+        /* allow container to scale but keep 16:9, give more vertical room on tablet */
+        aspect-ratio: 16 / 9;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 60vh !important; /* increased from 420px */
+        min-height: 320px !important; /* ensure not too small */
+      }
+
+      /* WHAT LEADERS SAY: make image smaller to fit side-by-side on tablets */
+      .max-w-md.h-\[450px\] {
+        max-width: 360px !important;
+        height: 380px !important;
+      }
+
+      /* Contact section: stack but make left/right balanced */
+      .lg\:flex-row {
+        flex-direction: column !important;
+      }
+      .lg\:w-2\/3, .lg\:w-1\/2 {
+        width: 100% !important;
+      }
+      .lg\:min-h-\[600px\] {
+        min-height: auto !important;
+      }
+
+      /* Footer: 2 columns on one row */
+      footer .max-w-7xl.mx-auto.grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem !important;
+        text-align: left !important;
+      }
+
+      /* Footer social buttons slightly larger for touch */
+      footer .bg-gold.w-10.h-10 {
+        width: 44px !important;
+        height: 44px !important;
+      }
+    }
+
+    /* Mobile: up to 767px — ensure everything remains usable */
+    @media (max-width: 767px) {
+      /* Hero: not full-screen take less vertical space */
+      header.relative.h-screen,
+      header[role="banner"],
+      header {
+        height: 56vh !important;
+      }
+
+      /* Hero heading: smaller and left/right padding */
+      header .text-4xl.md\:text-6xl {
+        font-size: 1.6rem !important;
+        line-height: 1.06 !important;
+        text-align: left !important;
+        max-width: 100% !important;
+      }
+
+      /* Nav: ensure mobile menu button visible and padded */
+      #navbar {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      /* Text blocks: slightly smaller for readability */
+      .text-xl.md\:text-2xl {
+        font-size: 1rem !important;
+      }
+      .text-4xl.md\:text-6xl {
+        font-size: 1.4rem !important;
+      }
+
+      /* WHAT LEADERS SAY: image becomes full width and above text */
+      .max-w-md.h-\[450px\] {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-bottom: 1rem;
+      }
+
+      /* Contact section: vertical stack */
+      .w-full.lg\:w-1\/2, .w-full.lg\:w-2\/3 {
+        width: 100% !important;
+      }
+
+      /* Footer: single column on mobile */
+      footer .max-w-7xl.mx-auto.grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        text-align: center !important;
+      }
+      footer .flex.flex-col.items-center.md\:items-start {
+        align-items: center !important;
+      }
+    }
   </style>
+
 
 
   <!-- Font Awesome CDN (Latest Version with FAB Icons Support) -->
@@ -206,7 +331,7 @@
           SERVING SURGEONS ACROSS <br class="hidden md:block">INDIA & BEYOND
         </h2>
         <div class="text-xl md:text-2xl leading-relaxed">
-          Based in Gujarat, India, SAH Ortho caters to hospitals, distributors, and surgeons across India and exports to
+          Based in North West Delhi, India, SAH Ortho caters to hospitals, distributors, and surgeons across India and exports to
           multiple countries. Our mission is to provide cutting-edge orthopaedic trauma solutions backed by strong
           technical expertise and responsive customer support.
         </div>
@@ -254,13 +379,13 @@
 </section>
 
 
-  <!-- WHAT LEADERS SAY -->
+  <!-- LEADING WITH VISION -->
 <section class="bg-white text-navy px-8 md:px-[8rem] py-20">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
     <!-- Left Side: Quote / Content -->
     <div>
-      <h2 class="text-4xl md:text-6xl font-light leading-tight mb-8">WHAT LEADERS SAY</h2>
+      <h2 class="text-4xl md:text-6xl font-light leading-tight mb-8">LEADING WITH VISION</h2>
 
       <p class="text-xl md:text-2xl text-gold mb-6 leading-relaxed">
         "At SAH Ortho, we don’t just manufacture implants, we build trust.
@@ -286,6 +411,7 @@
     </div>
   </div>
 </section>
+
 
 
   <!-- CONTACT SECTION -->

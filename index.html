@@ -39,7 +39,85 @@
         font-family: Helvetica, Arial, sans-serif;
       }
     }
+
+    /* Tablet-specific tweaks: 768px - 1024px
+       Keeps desktop (>=1024px) unchanged and improves tablet layout/spacing & touch targets */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      /* Slightly reduce hero height on tablet so content fits better */
+      header.relative.h-screen,
+      header[role="banner"],
+      header {
+        height: 75vh !important;
+      }
+
+      /* Reduce large horizontal paddings used for desktop sections */
+      section {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+      }
+
+      /* Make the product cards grid 2 columns on tablet (instead of 3) */
+      .grid.grid-cols-1.md\:grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem;
+      }
+
+      /* Increase image size inside cards and cap height for consistent layout */
+      .plates-slider-img,
+      .screws-slider-img,
+      .instruments-slider-img {
+        width: 85% !important;
+        max-height: 220px;
+        object-fit: contain;
+      }
+
+      /* Make dots larger for touch */
+      .plates-dot,
+      .screws-dot,
+      .instruments-dot {
+        width: 10px !important;
+        height: 10px !important;
+      }
+
+      /* Reduce navbar padding and tighten menu spacing on tablet */
+      #navbar {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+      }
+      #navLinks {
+        gap: 1rem;
+      }
+
+      /* Slightly smaller hero heading on tablet for better fit */
+      header h2 {
+        font-size: 2.2rem !important;
+        line-height: 1.05 !important;
+      }
+
+      /* Footer: switch to two columns for tablet */
+      footer .max-w-7xl.mx-auto.grid,
+      footer .max-w-7xl.mx-auto {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem;
+        text-align: left;
+      }
+
+      /* Improve touch targets for footer social buttons */
+      footer .bg-gold.w-10.h-10 {
+        width: 44px !important;
+        height: 44px !important;
+      }
+
+      /* Ensure overlay/modal remains centered with appropriate max-width on tablet */
+      #overlay > div {
+        max-width: 680px;
+        margin: 0 1rem;
+      }
+    }
   </style>
+
+
+
 
 
   <!-- Font Awesome CDN (Latest Version with FAB Icons Support) -->
@@ -246,9 +324,9 @@
       <!-- Text Content -->
       <div class="w-full md:w-[70%] border-t border-b border-navy py-6 flex flex-col justify-center">
         <h3 class="text-2xl md:text-3xl font-medium mb-4">SURGEON-FOCUSED DESIGN</h3>
-        <ul class="list-disc list-inside text-lg md:text-xl space-y-2 marker:text-grayLight">
-          <li>Implants engineered for precise application – ensuring accuracy, stability, and ease of use in complex trauma cases.</li>
-          <li>Optimized instrument ergonomics for intuitive handling and reduced surgical fatigue.</li>
+        <ul class="list-disc pl-6 text-lg md:text-xl space-y-2 marker:text-grayLight">
+          <li class="pl-2">Implants engineered for precise application – ensuring accuracy, stability, and ease of use in complex trauma cases.</li>
+          <li class="pl-2">Optimized instrument ergonomics for intuitive handling and reduced surgical fatigue.</li>
         </ul>
       </div>
     </div>
@@ -263,9 +341,9 @@
       <!-- Text Content -->
       <div class="w-full md:w-[70%] border-t border-b border-navy py-6 flex flex-col justify-center">
         <h3 class="text-2xl md:text-3xl font-medium mb-4">OPERATIONAL EFFICIENCY</h3>
-        <ul class="list-disc list-inside text-lg md:text-xl space-y-2 marker:text-grayLight">
-          <li>Standardized instrument sets minimize preparation time and optimize workflow in the operating room.</li>
-          <li>Cross-compatible implants and tools reduce learning curves, improve surgical outcomes, and limit procedural errors.</li>
+        <ul class="list-disc pl-6 text-lg md:text-xl space-y-2 marker:text-grayLight">
+          <li class="pl-2">Standardized instrument sets minimize preparation time and optimize workflow in the operating room.</li>
+          <li class="pl-2">Cross-compatible implants and tools reduce learning curves, improve surgical outcomes, and limit procedural errors.</li>
         </ul>
       </div>
     </div>
@@ -280,9 +358,9 @@
       <!-- Text Content -->
       <div class="w-full md:w-[70%] border-t border-b border-navy py-6 flex flex-col justify-center">
         <h3 class="text-2xl md:text-3xl font-medium mb-4">COST & RESOURCE OPTIMIZATION</h3>
-        <ul class="list-disc list-inside text-lg md:text-xl space-y-2 marker:text-grayLight">
-          <li>Comprehensive yet lean implant portfolio reduces inventory costs while ensuring full procedural coverage.</li>
-          <li>Reusable, easy-to-clean instruments designed for long-term durability and lower sterilization costs.</li>
+        <ul class="list-disc pl-6 text-lg md:text-xl space-y-2 marker:text-grayLight">
+          <li class="pl-2">Comprehensive yet lean implant portfolio reduces inventory costs while ensuring full procedural coverage.</li>
+          <li class="pl-2">Reusable, easy-to-clean instruments designed for long-term durability and lower sterilization costs.</li>
         </ul>
       </div>
     </div>

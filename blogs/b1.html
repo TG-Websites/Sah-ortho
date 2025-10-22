@@ -29,10 +29,57 @@
       }
     }
   </script>
-  <style>
+    <style>
     @layer base {
       body {
         font-family: Helvetica, Arial, sans-serif;
+      }
+    }
+
+    
+
+      /* Footer: 2 columns in one row on tablet */
+      footer .max-w-7xl.mx-auto.grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem !important;
+        text-align: left !important;
+      }
+      /* Make social buttons slightly larger for touch */
+      footer .bg-gold.w-10.h-10 {
+        width: 44px !important;
+        height: 44px !important;
+      }
+
+      /* Features/tech section spacing adjustments */
+      .flex.flex-col.lg\:flex-row.items-center.lg\:items-start {
+        gap: 1.25rem !important;
+      }
+
+      /* Ensure images inside feature cards look good */
+      .w-full.h-\[160px\].sm\:h-\[180px\] {
+        height: 200px !important;
+      }
+    
+
+    /* Small mobile fixes if needed (preserve existing mobile behaviour but ensure readability) */
+    @media (max-width: 767px) {
+      header.relative.h-screen,
+      header[role="banner"],
+      header {
+        height: 56vh !important;
+      }
+      .relative.z-10 h2.text-goldLight,
+      .relative.z-10 h2.text-gold {
+        font-size: 1.6rem !important;
+        line-height: 1.06 !important;
+        text-align: left !important;
+        max-width: 100% !important;
+      }
+      /* Footer single column on small screens */
+      footer .max-w-7xl.mx-auto.grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        text-align: center !important;
       }
     }
   </style>
