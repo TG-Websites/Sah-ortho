@@ -34,12 +34,43 @@
         }
     </script>
     <style>
-        @layer base {
-            body {
-                font-family: Helvetica, Arial, sans-serif;
-            }
-        }
-    </style>
+    @layer base {
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+    }
+
+
+        /* Tablet only: 768px - 991px */
+    @media (min-width: 768px) and (max-width: 991px) {
+      footer .max-w-7xl.mx-auto.grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem !important;
+        align-items: start !important;
+      }
+
+      footer .max-w-7xl.mx-auto.grid > div {
+        text-align: left !important;
+      }
+
+      footer .flex.flex-col.items-center.md\:items-start.space-y-8 {
+        align-items: flex-start !important;
+      }
+    }
+
+    /* Ensure desktop layout remains 4 columns (>=1025px) */
+    @media (min-width: 1025px) {
+      footer .max-w-7xl.mx-auto.grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 3rem !important;
+        text-align: left !important;
+      }
+
+      footer .flex.flex-col.items-center.md\:items-start.space-y-8 {
+        align-items: flex-start !important;
+      }
+    }
+  </style>
 
 
     <!-- Font Awesome CDN (Latest Version with FAB Icons Support) -->
