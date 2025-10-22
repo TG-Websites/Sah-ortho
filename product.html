@@ -323,68 +323,80 @@
   </section>
 
 
-  <!-- TECHNOLOGY SECTION -->
-  <section class="bg-white px-6 md:px-[8rem] py-24">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12">
+<!-- TECHNOLOGY SECTION -->
+<section class="bg-white px-6 md:px-[8rem] py-24">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12">
 
-      <!-- Left: Text -->
-      <div class="flex-1 text-center lg:text-left">
-        <div class="border-t-2 border-navy mb-12 mx-auto lg:mx-0"></div>
-        <h2 class="text-navy text-4xl md:text-6xl font-light mb-8 leading-snug">OUR TECHNOLOGY</h2>
-        <h3 class="text-navy text-xl md:text-2xl font-semibold mb-6">PRECISION ENGINEERED FOR PERFORMANCE</h3>
-        <p class="text-navy text-base md:text-lg mb-6">
-          At SAH Ortho, we combine advanced engineering, high-grade materials, and strict quality control
-          to manufacture world-class orthopaedic implants. Our implants are CNC-machined from certified
-          stainless steel and titanium alloys, ensuring optimal strength, biocompatibility, and longevity.
-        </p>
-        <p class="text-navy text-base md:text-lg">
-          Each product undergoes rigorous mechanical testing and is manufactured in ISO 13485 certified facilities.
-          From anatomical plate contouring to variable-angle locking systems, every innovation is designed
-          to simplify surgery and improve patient outcomes.
-        </p>
+    <!-- Left: Text -->
+    <div class="flex-1 text-center lg:text-left">
+      <div class="border-t-2 border-navy mb-12 mx-auto lg:mx-0"></div>
+      <h2 class="text-navy text-4xl md:text-6xl font-light mb-8 leading-snug">OUR TECHNOLOGY</h2>
+      <h3 class="text-navy text-xl md:text-2xl font-semibold mb-6">PRECISION ENGINEERED FOR PERFORMANCE</h3>
+      <p class="text-navy text-base md:text-lg mb-6">
+        At SAH Ortho, we combine advanced engineering, high-grade materials, and strict quality control
+        to manufacture world-class orthopaedic implants. Our implants are CNC-machined from certified
+        stainless steel and titanium alloys, ensuring optimal strength, biocompatibility, and longevity.
+      </p>
+      <p class="text-navy text-base md:text-lg">
+        Each product undergoes rigorous mechanical testing and is manufactured in ISO 13485 certified facilities.
+        From anatomical plate contouring to variable-angle locking systems, every innovation is designed
+        to simplify surgery and improve patient outcomes.
+      </p>
+    </div>
+
+    <!-- Right: Image + Dots -->
+    <div class="flex-1 flex flex-col items-center">
+      <div
+        class="w-full max-w-sm h-[300px] sm:h-[400px] flex items-center justify-center bg-gray-50 border border-gray-200 mx-auto overflow-hidden">
+        <img src="./assets/tech1.png" alt="SAH Ortho Technology"
+          class="w-full h-full object-contain transition-opacity duration-500 opacity-100" id="tech-img">
       </div>
 
-
-      <!-- Right: Image + Dots -->
-      <div class="flex-1 flex flex-col items-center">
-        <div
-          class="w-full max-w-sm h-[300px] sm:h-[400px] flex items-center justify-center bg-gray-50 border border-gray-200 mx-auto">
-          <img src="./assets/tech1.png" alt="SAH Ortho Technology"
-            class="w-full h-full object-contain transition-all duration-300" id="tech-img">
-        </div>
-        <div class="flex space-x-2 mt-4">
-          <button class="w-3 h-3 rounded-full bg-navy" id="dot-0"></button>
-          <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-1"></button>
-          <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-2"></button>
-        </div>
+      <div class="flex space-x-2 mt-4">
+        <button class="w-3 h-3 rounded-full bg-navy" id="dot-0"></button>
+        <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-1"></button>
+        <button class="w-3 h-3 rounded-full border border-navy bg-white" id="dot-2"></button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
     const techImages = [
-      "./assets/tech1.png",
-      "./assets/tech2.png",
-      "./assets/tech3.png"
+      "assets/tech1.png",
+      "assets/tech2.png",
+      "assets/tech3.png"
     ];
     const techImg = document.getElementById('tech-img');
     const dots = [0, 1, 2].map(i => document.getElementById('dot-' + i));
 
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
-        techImg.src = techImages[i];
+        // fade out current image
+        techImg.style.opacity = 0;
+        setTimeout(() => {
+          techImg.src = techImages[i];
+          techImg.onload = () => {
+            techImg.style.opacity = 1;
+          };
+        }, 200);
+
+        // active dot styling
         dots.forEach((d, idx) => {
           if (idx === i) {
             d.classList.add('bg-navy');
-            d.classList.remove('bg-white');
+            d.classList.remove('bg-white', 'border');
           } else {
-            d.classList.add('bg-white', 'border', 'border-navy');
             d.classList.remove('bg-navy');
+            d.classList.add('bg-white', 'border', 'border-navy');
           }
         });
       });
     });
-  </script>
+  });
+</script>
+
 
 
 
